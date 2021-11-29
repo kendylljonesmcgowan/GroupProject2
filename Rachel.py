@@ -22,17 +22,17 @@ def main():
 
     # Display program purpose
     print("Welcome to 'PURRfect Pals'")
-    print("Get ready to meet and adopt feline friends \n from four different cat rescues.")
+    print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
-    print("")
-    print('************************************************************************************************') 
-    print()
+    
 
 #################### Start of input ########################
+input_username =  []       			# create empty list for user name
 
-
-
-
+username = str(input("Gamer, what is your name? "))
+print("Great! " + username + ", Pack your catnip and let's head to our first cat rescue!")
+print('*****=^..^=*****') 
+print('*****=^..^=*****')
 
 
 

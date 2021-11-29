@@ -22,6 +22,7 @@ def main():
 
     # Display program purpose
     print("Welcome to 'PURRfect Pals'")
+    print('*****=^..^=*****')
     print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
     
@@ -39,7 +40,19 @@ print('*****=^..^=*****')
 
 ############### End of input, Start of calculations ################
 
-
+                                     ,
+              ,-.       _,---._ __  / \
+             /  )    .-'       `./ /   \
+            (  (   ,'            `/    /|
+             \  `-"             \'\   / |
+              `.              ,  \ \ /  |
+               /`.          ,'-`----Y   |
+              (            ;        |   '
+              |  ,-.    ,-'         |  /
+              |  | (   |        hjw | /
+              )  |  \  `.___________|/
+              `--'   `--'
+#http://www.ascii-art.de/ascii/c/cat.txt
 
 
 

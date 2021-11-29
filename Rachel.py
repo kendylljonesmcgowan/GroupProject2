@@ -1,4 +1,11 @@
+#Geom 67 Group 2 Purrfect Pals Computer Terminal Game
+#version 1.0
+
 import math
+import turtle
+#import turtle for visual output?!
+#bring in turtle from Assignment 1 .py files
+
 
 #define functions
 

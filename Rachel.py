@@ -12,34 +12,39 @@ import turtle
 
 #call in CSV
 #open file catdata.csv for reading
-with open('catdata.csv') as catdata:
-    for cat in catdata:
+# with open('catdata.csv') as catdata:
+#     for cat in catdata:
+
+#more "for loop" schtuff
 
 
 
-
-def main():
+# def main():
 
     # Display program purpose
-    print("Welcome to 'PURRfect Pals'")
-    print('*****=^..^=*****')
-    print("Get ready to meet and adopt feline friends from four different cat rescues.")
-    print("Each cat is looking for their furrever home, will you be the purrfect match?")
+print("Welcome to 'PURRfect Pals'")
+print('*****=^..^=*****')
+print("Get ready to meet and adopt feline friends from four different cat rescues.")
+print("Each cat is looking for their furrever home, will you be the purrfect match?")
     
 
 #################### Start of input ########################
-input_username =  []       			# create empty list for user name
+# input_username =  []       			# create empty list for user name
 
 username = str(input("Gamer, what is your name? "))
-print("Great! " + username + ", Pack your catnip and let's head to our first cat rescue!")
 print('*****=^..^=*****') 
-print('*****=^..^=*****')
+print("Great! " + username + ", Pack your catnip and let's head to our first cat rescue!")
+print('*=^..^=*')
+
+
+#back end computer things here
+
 
 
 
 
 ############### End of input, Start of calculations ################
-
+print("""
                                      ,
               ,-.       _,---._ __  / \
              /  )    .-'       `./ /   \
@@ -52,6 +57,8 @@ print('*****=^..^=*****')
               |  | (   |        hjw | /
               )  |  \  `.___________|/
               `--'   `--'
+              
+              """)
 #http://www.ascii-art.de/ascii/c/cat.txt
 
 
@@ -63,5 +70,5 @@ print('*****=^..^=*****')
 
 
 
-if __name__=='__main__':  #calling defined function 'main'
-    main()
+# if __name__=='__main__':  #calling defined function 'main'
+#     main()

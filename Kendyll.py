@@ -7,7 +7,7 @@
 
 print("Welcome to the find your PURRfect friend game!")
 
-playername = input(str("What is your name?")
+playername = input(str("What is your name?"))
 
 print( "Hello," + str(playername) + "Welcome to Meow York City!! We will go thru 4 different Cat Discovery Areas. Where we will get to know the Unique Personalities of the different Cats To become the PURfect Cat Owner!" )
 print( "The goal of the game is to adopt all of the 16 cats. Each correct action towards a cat earns you “Purr Points”. The more Purr Points you earn the higher probability to adopt the cat. You have nine lives and you will lose a life and 3 “Purr Points” if the cat chooses not to be adopted." )

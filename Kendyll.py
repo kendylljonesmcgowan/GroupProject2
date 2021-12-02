@@ -5,6 +5,52 @@
 ## Inputs: Player Name, Interaction Action, Adoption Selection, 
 ## Outputs: Purr Points, Lives Lost, 
 
+## Kendyll's Cat Intro's and Reactions ##
+
+## CatName,Location,LocAlias,Colour,Breed,Personality,Age,      Brushing,Pets,OtherCats,Playing,Treats
+
+        ## Yams,B,Kitten City Rescue,Orange,Short-Hair,athletic,kitten,n,y,y,y,y
+
+print("Meow, my name is Yams! I am an orange Short-Hair with lots of energy. I love pets, playng and yummy treats...")
+
+print("Meow, I didnt like that, I dont think this is going to work...")
+## add ascii cat walking away
+
+print("Meow, I liked that, I think this is going to work out!")
+## add happy ascii cat
+
+        ## Leaf,B,Kitten City Rescue,Black,Short-Hair,aloof,adult,y,n,n,n,y
+
+print("Meow, my name is Leaf! I am a black Short-Hair and like to act aloof. I love brushing and yummy treats...")
+
+print("Meow, I didnt like that, I dont think this is going to work...")
+## add ascii cat walking away
+
+print("Meow, I liked that, I think this is going to work out!")
+## add happy ascii cat
+
+        ## Fox,B,Kitten City Rescue,Orange-White,Short-Hair,curious,adult,n,y,y,y,y
+
+print("Meow, my name is Fox! I am an orange-white Short-Hairfull of curosity. I love pets, playng and yummy treats...")
+
+print("Meow, I didnt like that, I dont think this is going to work...")
+## add ascii cat walking away
+
+print("Meow, I liked that, I think this is going to work out!")
+## add happy ascii cat
+
+        ## Dana,B,Kitten City Rescue,Calico,Short-Hair,independent,adult,y,y,n,n,n
+
+print("Meow, my name is Dana! I am a calico Short-Hair that is very independent. I love brushing...")
+
+print("Meow, I didnt like that, I dont think this is going to work...")
+## add ascii cat walking away
+
+print("Meow, I liked that, I think this is going to work out!")
+## add happy ascii cat
+
+## Game Start ##
+
 print("Welcome to the find your PURRfect friend game!")
 
 playername = input(str("What is your name?"))

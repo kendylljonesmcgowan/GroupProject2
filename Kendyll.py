@@ -16,4 +16,3 @@ print( "CATch them all! Hope you have PAWsome time playing our game!" )
 input(str("Which location would you like to visit first? PAWrk,"))
 
 
-

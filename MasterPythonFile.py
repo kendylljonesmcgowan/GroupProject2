@@ -27,6 +27,14 @@ def get_name():
     return input("Gamer, what is your name? ")
 
 
+#call in CSV
+#open file catdata.csv for reading
+# with open('catdata.csv') as catdata:
+#     for cat in catdata:
+
+
+
+
 #defines a function with an array containing the four different location files
 #random.shuffle returns the list in a random order
 def locations():
@@ -39,7 +47,7 @@ def main():
     #get the user's name
     username = get_name()
     #temporary loop below just for testing
-    Rachel.main()
+    Rachel.main(username)
 
     #for loop to iterate through each location
     # for location in locations():

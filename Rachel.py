@@ -9,7 +9,9 @@ import random
 
 
 #define functions
-def main():
+def main(username):
+    print("Hello " + username)
+    # all your code goes here
 
 #call in CSV
 #open file catdata.csv for reading
@@ -27,35 +29,25 @@ def main():
 #"Zelda" ""
 
 
-
-# def main():
-
-    # Display program purpose
-print("Welcome to 'PURRfect Pals'")
-print('*****=^..^=*****')
-print("Get ready to meet and adopt feline friends from four different cat rescues.")
-print("Each cat is looking for their furrever home, will you be the purrfect match?")
-    
-
 #################### Start of input ########################
 # input_username =  []       			# create empty list for user name
 
-username = str(input("Gamer, what is your name? "))
-print('*****=^..^=*****') 
-print("Great! " + username + ", Pack your catnip and let's head to Gary's Cat Cafe!")
-print('*=^..^=*')
-print()
-print("""
-                       (`.-,')
-                     .-'     ;
-                 _.-'   , `,-
-           _ _.-'     .'  /._
-         .' `  _.-.  /  ,'._;)
-        (       .  )-| (
-         )`,_ ,'_,'  \_;)  fL
- ('_  _,'.'  (___,))
-  `-:;.-'
-""")
+
+    print('*****=^..^=*****') 
+    print("Great! " + username + ", Pack your catnip and let's head to Gary's Cat Cafe!")
+    print('*=^..^=*')
+    print()
+    print("""
+                        (`.-,')
+                        .-'     ;
+                    _.-'   , `,-
+            _ _.-'     .'  /._
+            .' `  _.-.  /  ,'._;)
+            (       .  )-| (
+            )`,_ ,'_,'  \_;)  fL
+    ('_  _,'.'  (___,))
+    `-:;.-'
+    """)
 
 #begin loop for Gary's Cat Cafe
 
@@ -95,5 +87,6 @@ print("""
 
 
 
-if __name__=='__main__':  #calling defined function 'main'
-    main()
+if __name__=='__main__':  #calling defined function 'main
+    username = input("What is your name?")
+    main(username)

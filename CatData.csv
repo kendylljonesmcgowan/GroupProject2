@@ -1,4 +1,4 @@
-﻿CatName,Location,LocAlias,Colour,Breed,Personality,Age,Brushing,Pets,OtherCats,Playing,Treats
+﻿"CatName","Location","LocAlias","Colour","Breed","Personality","Age","Brushing","Pets","OtherCats","Playing","Treats"
 Periwinkle,A,Gary's Cat Cafe,Blue-Point,Siamese,cuddly,senior,y,y,y,y,n
 Tabitha,A,Gary's Cat Cafe,Orange,Short-Hair,athletic,adult,n,y,n,y,y
 SugarPaws,A,Gary's Cat Cafe,Tuxedo,Short-Hair,shy,kitten ,y,n,y,y,y

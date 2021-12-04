@@ -21,7 +21,7 @@ def main(username):
 
         # for index in Location
 
-        ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** ##
+        ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** refer back to troll game assignment 1 for inspo ##
 
         purrpoints = int(0)
 

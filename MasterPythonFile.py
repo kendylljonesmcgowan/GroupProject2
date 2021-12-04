@@ -7,18 +7,43 @@
 
 import math
 import random
+
 import Rachel
 import Vince
 import Kendyll
 import Carol
 
-#defined main function
-#calls one of the four location files
-#random.shuffle will call each location file in a random order
+# Display program purpose
+#defining print_intro as a funtion
+def print_intro():
+
+    print("Welcome to 'PURRfect Pals'")
+    print('*****=^..^=*****')
+    print("Get ready to meet and adopt feline friends from four different cat rescues.")
+    print("Each cat is looking for their furrever home, will you be the purrfect match?")
+    
+#function to get user to imput name
+def get_name():
+    return input("Gamer, what is your name? ")
+
+
+#defines a function with an array containing the four different location files
+#random.shuffle returns the list in a random order
+def locations():
+    return random.shuffle([Rachel, Vince, Kendyll, Carol])
+
+#defining the main program function
 def main():
-    locations = [Rachel, Vince, Kendyll, Carol]
-    for location in random.shuffle(locations): 
+    #call in print_intro
+    print_intro()
+    #get the user's name
+    username = get_name()
+
+    #for loop to iterate through each location
+    for location in locations():
         location.main()
+
+
 
 
 

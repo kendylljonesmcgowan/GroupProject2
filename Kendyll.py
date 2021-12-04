@@ -23,7 +23,7 @@ def main(username):
 
         ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** ##
 
-purrpoints = int(0)
+        purrpoints = int(0)
 
         ## CatName,Location,LocAlias,Colour,Breed,Personality,Age,      Brushing,Pets,OtherCats,Playing,Treats
 

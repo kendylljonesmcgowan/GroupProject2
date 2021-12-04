@@ -24,6 +24,11 @@ def main(username):
         ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** refer back to troll game assignment 1 for inspo ##
 
         purrpoints = int(0)
+        brushaction = str("Y/N")
+        petaction = str("Y/N")
+        playaction = str("Y/N")
+        treataction = str("Y/N")
+
 
         ## CatName,Location,LocAlias,Colour,Breed,Personality,Age,      Brushing,Pets,OtherCats,Playing,Treats
 

@@ -28,19 +28,19 @@ purrpoints = int(0)
         ## CatName,Location,LocAlias,Colour,Breed,Personality,Age,      Brushing,Pets,OtherCats,Playing,Treats
 
         # if catname = "Yams"
-                ## Yams,B,Kitten City Rescue,Orange,Short-Hair,athletic,kitten,n,y,y,y,y
+        ## Yams,B,Kitten City Rescue,Orange,Short-Hair,athletic,kitten,n,y,y,y,y
 
-                print("Meow, my name is Yams! I am an orange Short-Hair kitten with lots of energy. Lets go on an adventure outside and get lost! It is so much fun to sneak out of the house. I love pets, playng and yummy treats...")
+                        print("Meow, my name is Yams! I am an orange Short-Hair kitten with lots of energy. Lets go on an adventure outside and get lost! It is so much fun to sneak out of the house. I love pets, playng and yummy treats...")
 
                 # if brushaction = Y
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
                         ## add ascii cat walking away
                 # else
-                print("Meow, you seem like a lot of fun, I think this is going to work out!")
-                print("I would love for you to adopt me!")
-                purrpoints = (purrpoints + 3)
-                ## add happy ascii cat
+                        print("Meow, you seem like a lot of fun, I think this is going to work out!")
+                        print("I would love for you to adopt me!")
+                        purrpoints = (purrpoints + 3)
+                        ## add happy ascii cat
 
                 # if petaction = N
                         print("Meow, I didnt like that, I dont think this is going to work...")
@@ -73,19 +73,19 @@ purrpoints = int(0)
                         ## add happy ascii cat        
 
         # if catname = "Leaf"
-                        ## Leaf,B,Kitten City Rescue,Black,Short-Hair,aloof,adult,y,n,n,n,y
+        ## Leaf,B,Kitten City Rescue,Black,Short-Hair,aloof,adult,y,n,n,n,y
 
-                print("Meow, my name is Leaf! I am a black Short-Hair adult and like to act aloof. I am happiest when napping in the corner while you read on a cozy winters day. I love brushing and yummy treats...")
+                        print("Meow, my name is Leaf! I am a black Short-Hair adult and like to act aloof. I am happiest when napping in the corner while you read on a cozy winters day. I love brushing and yummy treats...")
 
                 # if brushaction = N
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
                         ## add ascii cat walking away
                 # else
-                print("Meow, you seem like a lot of fun, I think this is going to work out!")
-                print("I would love for you to adopt me!")
-                purrpoints = (purrpoints + 3)
-                ## add happy ascii cat
+                        print("Meow, you seem like a lot of fun, I think this is going to work out!")
+                        print("I would love for you to adopt me!")
+                        purrpoints = (purrpoints + 3)
+                        ## add happy ascii cat
 
                 # if petaction = Y
                         print("Meow, I didnt like that, I dont think this is going to work...")
@@ -117,20 +117,20 @@ purrpoints = int(0)
                         purrpoints = (purrpoints + 3)
                         ## add happy ascii cat
 
-                # if catname = "Fox"
-                        ## Fox,B,Kitten City Rescue,Orange-White,Short-Hair,curious,adult,n,y,y,y,y
+        # if catname = "Fox"
+        ## Fox,B,Kitten City Rescue,Orange-White,Short-Hair,curious,adult,n,y,y,y,y
 
-                print("Meow, my name is Fox! I am an orange-white Short-Hair adult that's full of curosity. I like to stare out the window and watch birds all day. I love pets, playng and yummy treats...")
+                        print("Meow, my name is Fox! I am an orange-white Short-Hair adult that's full of curosity. I like to stare out the window and watch birds all day. I love pets, playng and yummy treats...")
 
                 # if brushaction = Y
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
                         ## add ascii cat walking away
                 # else
-                print("Meow, you seem like a lot of fun, I think this is going to work out!")
-                print("I would love for you to adopt me!")
-                purrpoints = (purrpoints + 3)
-                ## add happy ascii cat
+                        print("Meow, you seem like a lot of fun, I think this is going to work out!")
+                        print("I would love for you to adopt me!")
+                        purrpoints = (purrpoints + 3)
+                        ## add happy ascii cat
 
                 # if petaction = N
                         print("Meow, I didnt like that, I dont think this is going to work...")
@@ -162,20 +162,20 @@ purrpoints = int(0)
                         purrpoints = (purrpoints + 3)
                         ## add happy ascii cat
 
-                # if catname = "Dana"
-                        ## Dana,B,Kitten City Rescue,Calico,Short-Hair,independent,adult,y,y,n,n,n
+        # if catname = "Dana"
+        ## Dana,B,Kitten City Rescue,Calico,Short-Hair,independent,adult,y,y,n,n,n
 
-                print("Meow, my name is Dana! I am a calico Short-Hair adult that is very independent. My dream day includes sleeping all day and running around the house late at night. I love brushing...")
+                        print("Meow, my name is Dana! I am a calico Short-Hair adult that is very independent. My dream day includes sleeping all day and running around the house late at night. I love brushing...")
 
                 # if brushaction = N
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
                         ## add ascii cat walking away
                 # else
-                print("Meow, you seem like a lot of fun, I think this is going to work out!")
-                print("I would love for you to adopt me!")
-                purrpoints = (purrpoints + 3)
-                ## add happy ascii cat
+                        print("Meow, you seem like a lot of fun, I think this is going to work out!")
+                        print("I would love for you to adopt me!")
+                        purrpoints = (purrpoints + 3)
+                        ## add happy ascii cat
 
                 # if petaction = N
                         print("Meow, I didnt like that, I dont think this is going to work...")
@@ -206,7 +206,6 @@ purrpoints = int(0)
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 3)
                         ## add happy ascii cat
-
 
 
 if __name__=='__main__':        # calling defined function 'main'

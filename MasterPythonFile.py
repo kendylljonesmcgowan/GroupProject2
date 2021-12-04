@@ -44,11 +44,5 @@ def main():
         location.main()
 
 
-
-
-
-
-
-
 if __name__=='__main__':  #calling defined function 'main'
     main()

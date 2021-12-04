@@ -21,7 +21,7 @@ def main(username):
 
         # for index in Location
 
-        ## Cat Intro's and Reactions ##
+        ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** ##
 
 purrpoints = int(0)
 

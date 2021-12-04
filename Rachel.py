@@ -3,12 +3,13 @@
 
 import math
 import turtle
+import random
 #import turtle for visual output?!
 #bring in turtle from Assignment 1 .py files
 
 
 #define functions
-
+def main():
 
 #call in CSV
 #open file catdata.csv for reading
@@ -95,4 +96,4 @@ print("""
 
 
 if __name__=='__main__':  #calling defined function 'main'
-main()
+    main()

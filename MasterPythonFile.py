@@ -9,9 +9,9 @@ import math
 import random
 
 import Rachel
-import Vince
-import Kendyll
-import Carol
+# import Vince
+# import Kendyll
+# import Carol
 
 # Display program purpose
 #defining print_intro as a funtion
@@ -38,10 +38,12 @@ def main():
     print_intro()
     #get the user's name
     username = get_name()
+    #temporary loop below just for testing
+    Rachel.main()
 
     #for loop to iterate through each location
-    for location in locations():
-        location.main()
+    # for location in locations():
+    #     location.main()
 
 
 if __name__=='__main__':  #calling defined function 'main'

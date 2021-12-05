@@ -44,7 +44,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if petaction = N
@@ -54,7 +54,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if playaction = N
@@ -64,7 +64,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if treataction = N
@@ -74,7 +74,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat        
 
         # if catname = "Leaf"
@@ -89,7 +89,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if petaction = Y
@@ -99,7 +99,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if playaction = Y
@@ -109,7 +109,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if treataction = N
@@ -119,7 +119,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
         # if catname = "Fox"
@@ -134,7 +134,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if petaction = N
@@ -144,7 +144,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if playaction = N
@@ -154,7 +154,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if treataction = N
@@ -164,7 +164,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
         # if catname = "Dana"
@@ -179,7 +179,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if petaction = N
@@ -189,7 +189,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if playaction = Y
@@ -199,7 +199,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
                 # if treataction = Y
@@ -209,7 +209,7 @@ def main(username):
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
-                        purrpoints = (purrpoints + 3)
+                        purrpoints = (purrpoints + 1)
                         ## add happy ascii cat
 
 

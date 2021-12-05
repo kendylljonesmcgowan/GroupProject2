@@ -1,10 +1,7 @@
 # Carol.py test file; not a working code yet
 # main definition adn call at end is from Rachel
 import math
-import turtle
 import random
-#import turtle for visual output? 
-#bring in turtle from Assignment 1 .py files
 #define functions
 def main(username):
     print("Hello " + username)
@@ -13,7 +10,7 @@ def main(username):
 # each cat needs 8 statements for positive and negative interactions
 locations = ["A","B","C","D"]
 # location input exception:
-def location_exception:
+def main(location_exception):
   while current_location = chosen_location:
     print("You're already here! Where would you like to go next?")
     print(locations)
@@ -30,7 +27,7 @@ while lives > 0:
     break # this will break the whole while loop onces lives have run out
 
 # end of FULL GAME LOOP due to loop break
-if lives = 0
+if lives = 0:
   print("You've run out of lives!")
   print("GAME OVER")
   print("YOu adopted the following cats:"+ adopted_cats + "!")

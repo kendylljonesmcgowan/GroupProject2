@@ -6,6 +6,7 @@
 ## Outputs: Purr Points, Lives Lost, 
 
 import random
+import math
 
 
 def main(username):
@@ -24,6 +25,7 @@ def main(username):
         ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** refer back to troll game assignment 1 for inspo ##
 
         purrpoints = int(0)
+        lives = int(9)
         brushaction = str("Y/N")
         petaction = str("Y/N")
         playaction = str("Y/N")
@@ -37,44 +39,56 @@ def main(username):
 
                         print("Meow, my name is Yams! I am an orange Short-Hair kitten with lots of energy. Lets go on an adventure outside and get lost! It is so much fun to sneak out of the house. I love pets, playng and yummy treats...")
 
-                # if brushaction = Y
+                # if brushaction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if petaction = N
+                # if petaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if playaction = N
+                # if playaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if treataction = N
+                # if treataction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat        
 
         # if catname = "Leaf"
@@ -82,44 +96,56 @@ def main(username):
 
                         print("Meow, my name is Leaf! I am a black Short-Hair adult and like to act aloof. I am happiest when napping in the corner while you read on a cozy winters day. I love brushing and yummy treats...")
 
-                # if brushaction = N
+                # if brushaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if petaction = Y
+                # if petaction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if playaction = Y
+                # if playaction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if treataction = N
+                # if treataction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
         # if catname = "Fox"
@@ -127,44 +153,56 @@ def main(username):
 
                         print("Meow, my name is Fox! I am an orange-white Short-Hair adult that's full of curosity. I like to stare out the window and watch birds all day. I love pets, playng and yummy treats...")
 
-                # if brushaction = Y
+                # if brushaction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if petaction = N
+                # if petaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if playaction = N
+                # if playaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if treataction = N
+                # if treataction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
         # if catname = "Dana"
@@ -172,44 +210,56 @@ def main(username):
 
                         print("Meow, my name is Dana! I am a calico Short-Hair adult that is very independent. My dream day includes sleeping all day and running around the house late at night. I love brushing...")
 
-                # if brushaction = N
+                # if brushaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if petaction = N
+                # if petaction = "N".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if playaction = Y
+                # if playaction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
-                # if treataction = Y
+                # if treataction = "Y".upper():
                         print("Meow, I didnt like that, I dont think this is going to work...")
                         print("No Purr Points earned")
+                        print("One life lost!")
+                        lives = (lives - 1)
                         ## add ascii cat walking away
                 # else
                         print("Meow, you seem like a lot of fun, I think this is going to work out!")
                         print("I would love for you to adopt me!")
                         purrpoints = (purrpoints + 1)
+                        lives = (lives - 0)
                         ## add happy ascii cat
 
 

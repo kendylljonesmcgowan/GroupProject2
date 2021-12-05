@@ -8,6 +8,8 @@
 import random
 import math
 
+## fix lives portion: add negative interactions and then use if for neg actions and tethert that to lives ##
+
 
 def main(username):
         print("Hello" + username)
@@ -25,6 +27,7 @@ def main(username):
         ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** refer back to troll game assignment 1 for inspo ##
 
         ## add inputs for these and print them at the beginning of each cat ##
+
         purrpoints = int(0)
         lives = int(9)
         brushaction = str("Y/N")
@@ -262,6 +265,8 @@ def main(username):
                         purrpoints = (purrpoints + 1)
                         lives = (lives - 0)
                         ## add happy ascii cat
+
+## add outro for kitty city rescue! ##
 
 
 if __name__=='__main__':        # calling defined function 'main'

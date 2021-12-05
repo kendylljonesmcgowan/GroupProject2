@@ -18,7 +18,7 @@ import Rachel
 def print_intro():
 
     print("Welcome to 'PURRfect Pals'")
-    print('*****=^..^=*****')
+    print("*****=^..^=*****")
     print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
     

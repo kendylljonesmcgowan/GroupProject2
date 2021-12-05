@@ -24,6 +24,7 @@ def main(username):
 
         ## Cat Intro's and Reactions ** still have to figure out "Purr Points" points system ** refer back to troll game assignment 1 for inspo ##
 
+        ## add inputs for these and print them at the beginning of each cat ##
         purrpoints = int(0)
         lives = int(9)
         brushaction = str("Y/N")

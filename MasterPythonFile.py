@@ -74,3 +74,12 @@ def main():
 
 if __name__=='__main__':  #calling defined function 'main'
     main()
+
+
+
+    #ignore.
+    #possibly extra code: 
+    #call in CSV
+#open file catdata.csv for reading
+# with open('catdata.csv') as catdata:
+#     for cat in catdata:

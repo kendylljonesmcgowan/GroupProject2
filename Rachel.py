@@ -19,7 +19,7 @@ def gary_cats():
                     {'actionName': 'pets', 'likes': True},
                     {'actionName': 'othercats', 'likes': True},
                     {'actionName': 'playing', 'likes': True},
-                    {'actionName': 'treas', 'likes': False},
+                    {'actionName': 'treats', 'likes': False},
                 ]
             },
             {
@@ -33,7 +33,7 @@ def gary_cats():
                     {'actionName': 'pets', 'likes': True},
                     {'actionName': 'othercats', 'likes': False},
                     {'actionName': 'playing', 'likes': True},
-                    {'actionName': 'treas', 'likes': True},
+                    {'actionName': 'treats', 'likes': True},
                 ]
             },
             {
@@ -63,7 +63,7 @@ def gary_cats():
                     {'actionName': 'playing', 'likes': True},
                     {'actionName': 'treats', 'likes': True},
                 ]
-            },
+            }
         ]
     
 
@@ -107,7 +107,7 @@ def do_action(choice, cat, points):
                    """)
         print("Boo. HISS. Boo! ")
         print("I just scratched you!")
-        points -= 1
+        points -= 0
     return points
 
 def print_welcome_message():
@@ -122,6 +122,9 @@ def print_welcome_message():
  fL (,__....----'''       (,..--''
      """)
 
+#TODO
+#if lives is > 0 
+#lif lives is <= 0 then print("You lost! Good bye. GAME OVER.")
 
 def main(userstate):
     username = userstate['username']

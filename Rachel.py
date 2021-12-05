@@ -3,7 +3,6 @@
 #version 1.0
 #cat ascii art from: #http://www.ascii-art.de/ascii/c/cat.txt
 
-import math
 import random
 
 #list of dictionaries for cats at Gary's cat cafe

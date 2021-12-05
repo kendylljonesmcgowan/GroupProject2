@@ -22,11 +22,11 @@ lives = 9
 purr_points = 0
 
 # WITHIN LOOP: likely has to be defined and called after every full cat event
-if lives = 0:
+if lives == 0:
   break # this will break the whole game loop onces lives have run out
 # end of FULL GAME LOOP due to loop break
 def main(end_statements):
-  if lives = 0:
+  if lives == 0:
     print("You've run out of lives!")
     print("GAME OVER")
     print("YOu adopted the following cats:"+ adopted_cats + "!")
@@ -35,12 +35,12 @@ def main(end_statements):
     print("You adopted the following cats:"+ adopted_cats + "!")
     print("Purr points collected:" + purr_points + ";  Lives remaining:" + lives)
 
-# while loop for individual cat
+# while loop for individual cat??
 negative_interactions = 0
 positive_interactions = 0
 while negative_interactions < 3:
   print(action_options)
-  action = input("  What would you like to do wtih", current_cat, "? :  ")
+  action = input("  What would you like to do with", current_cat, "? :  ")
   if action = False:
     negative_interactions+=1
     print("negative interaction statment for cat")
@@ -52,7 +52,7 @@ while negative_interactions < 3:
 if negative_interactions == 3:
   print("Oh meow!! This cat doesn't want to come home with you!")
   lives-=1
-  continue     # within a loop
+  break     # will only affect the loop it is within, if nested outer loop will still run
 
 
 # DON'T DELETE THIS

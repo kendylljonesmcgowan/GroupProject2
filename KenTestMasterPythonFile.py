@@ -9,7 +9,7 @@ import math
 import random
 
 #import Rachel
-import Vince
+#import Vince
 import Kendyll    #uncomment other group member names to run whole program.  commented out for testing. 
 # import Kendyll
 # import Carol

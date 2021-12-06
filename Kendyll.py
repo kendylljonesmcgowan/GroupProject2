@@ -585,6 +585,7 @@ def main(userstate):
                         if userlives == 0:
                                 #break
                                 print()
+        print("You have earned" + points + "points, and have" + userlives + "lives left!")
         return (points,userlives)
 
 

@@ -341,21 +341,7 @@ def main(userstate):
                 elif points == 3:
                         response = "I'm still deciding... But If I go with you, you have to be a better Owner! Meow!"
                 else:
-                        response = """ 
-                        Meow, I don't think this is going to work out...
-                                    |\___/|
-                                    )     (
-                                   =\     /=
-                                     )===(
-                                    /     \
-                                    |     |
-                                   /       \
-                                   \       /
-                                    \__  _/
-                                      ( (
-                                       ) )
-                                      (_(
-                                          """
+                        response = "Meow, I don't think this is going to work out... I don't want to go home with you."
                 return response
 
         def adoptcat(points):
@@ -386,6 +372,10 @@ def main(userstate):
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you! We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username "and stay as long as you would like!")
         print(username + ", Here you'll meet 4 new cat friends!")
         print()
+
+        adoptedcatlist = [] #change to the dictionary
+        purrpoints = 0 #change to the dictionary
+        lives = 1 #change to the dictionary
 
         adoptedcatlist = []
         loc2catlist = ["yams", "leaf", "fox", "dana"]
@@ -431,8 +421,11 @@ def main(userstate):
          |        /_;-` _`'.
          \  '-----' _.-` '._)
           `'-------'""")
+                                print("Sorry, you have lost a life")
+                                lives -= 1#change to to use the master
+                                if lives == 0:
+                                        break
                         print()
-                        
 
 
                 elif cats == "leaf":
@@ -472,6 +465,10 @@ def main(userstate):
            _|||_
           ( / \ )
             """)
+                                print("Sorry, you have lost a life")
+                                lives -= 1#change to to use the master
+                                if lives == 0:
+                                        break
                         print()
 
 
@@ -515,6 +512,10 @@ def main(userstate):
                ) )
               (_(
             """)
+                                print("Sorry, you have lost a life")
+                                lives -= 1#change to to use the master
+                                if lives == 0:
+                                        break
                         print()
 
 
@@ -555,28 +556,39 @@ def main(userstate):
              `-'\  ,---\   | \
                 _) )    `. \ /
                (__/       ) ) 
-                         (_/
-            """)
+                         (_/""")
+                        print("Sorry, you have lost a life")
+                        lives -= 1#change to to use the master
+                        if lives == 0:
+                                break
                 print()
 
+        if lives == 0:
+                print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
+        print ("Here is you game summary: ")
+        print ("Cats Adopted")
+        print (adoptedcatlist)
+        print ("PurrPoints")
+        print (purrpoints)
+
         # extra goodbye code
-                print("""       
-       _                        
-       \`*-.                    
-        )  _`-.                 
-       .  : `. .                
-       : _   '  \               
-       ; *` _.   `*-._          
-       `-.-'          `-.       
-         ;       `       `.     
-         :.       .        \    
-         . \  .   :   .-'   .   
-         '  `+.;  ;  '      :   
-         :  '  |    ;       ;-. 
-         ; '   : :`-:     _.`* ;
-      .*' /  .*' ; .*`- +'  `*' 
-      `*-*   `*-*  `*-*'"""
-        )
+#                 print("""       
+#        _                        
+#        \`*-.                    
+#         )  _`-.                 
+#        .  : `. .                
+#        : _   '  \               
+#        ; *` _.   `*-._          
+#        `-.-'          `-.       
+#          ;       `       `.     
+#          :.       .        \    
+#          . \  .   :   .-'   .   
+#          '  `+.;  ;  '      :   
+#          :  '  |    ;       ;-. 
+#          ; '   : :`-:     _.`* ;
+#       .*' /  .*' ; .*`- +'  `*' 
+#       `*-*   `*-*  `*-*'"""
+#         )
 
 if __name__ == '__main__':
         main({'points':0, 'cats_collected':[], 'username':'', 'userlives':''})

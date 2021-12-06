@@ -281,103 +281,113 @@
 # print( "The goal of the game is to adopt all of the 16 cats. Each correct action towards a cat earns you “Purr Points”. The more Purr Points you earn the higher probability to adopt the cat. You have nine lives and you will lose a life and 3 “Purr Points” if the cat chooses not to be adopted." )
 # print( "CATch them all! Hope you have PAWsome time playing our game!" )
 
-def main(userstate):
-        username = userstate['username']
-        points = userstate['points']
-        cats_collected = userstate['cats_collected']
-        print('=^..^=')
-        print("Hello " + username)
-        print_welcome_message()
+# def main(userstate):
+#         username = userstate['username']
+#         points = userstate['points']
+#         cats_collected = userstate['cats_collected']
+#         print('=^..^=')
+#         print("Hello " + username)
+#         print_welcome_message()
 
-        def userinput():
-                print()
-                ibrush = str(input(" Would you like to Brush Me? (Y/N): "))
-                ipet = str(input(" Would you like to Pet Me? (Y/N): "))
-                iother = str(input(" Have you already adopted another cat? (Y/N): "))
-                iplay = str(input(" Would you like to play with Me? (Y/N): "))
-                itreat = str(input(" Would you like to give me a treat? (Y/N): "))
-                inputlist = [ibrush,ipet,iother,iplay,itreat]
-                return inputlist
+def userinput():
+        print()
+        ibrush = str(input(" Would you like to Brush Me? (Y/N): "))
+        ipet = str(input(" Would you like to Pet Me? (Y/N): "))
+        iother = str(input(" Have you already adopted another cat? (Y/N): "))
+        iplay = str(input(" Would you like to play with Me? (Y/N): "))
+        itreat = str(input(" Would you like to give me a treat? (Y/N): "))
+        inputlist = [ibrush,ipet,iother,iplay,itreat]
+        return inputlist
 
-        def yamspoints(iylist):
-                yamscombination = ("N","Y","Y","Y","Y")
-                yamspoints = 0
-                for trait in range(5):
-                        if yamscombination[trait] == iylist[trait].upper():
-                                yamspoints += 1
-                return yamspoints
+def yamspoints(iylist):
+        yamscombination = ("N","Y","Y","Y","Y")
+        yamspoints = 0
+        for trait in range(5):
+                if yamscombination[trait] == iylist[trait].upper():
+                        yamspoints += 1
+        return yamspoints
 
-        def leafpoints(illist):
-                leafcombination = ("Y","N","N","N","Y")
-                leafpoints = 0
-                for trait in range(5):
-                        if leafcombination[trait] == illist[trait].upper():
-                                leafpoints += 1
-                return leafpoints
+def leafpoints(illist):
+        leafcombination = ("Y","N","N","N","Y")
+        leafpoints = 0
+        for trait in range(5):
+                if leafcombination[trait] == illist[trait].upper():
+                        leafpoints += 1
+        return leafpoints
 
-        def foxpoints(iflist):
-                foxcombination = ("N","Y","Y","Y","Y")
-                foxpoints = 0
-                for trait in range(5):
-                        if foxcombination[trait] == iflist[trait].upper():
-                                foxpoints += 1
-                return foxpoints
+def foxpoints(iflist):
+        foxcombination = ("N","Y","Y","Y","Y")
+        foxpoints = 0
+        for trait in range(5):
+                if foxcombination[trait] == iflist[trait].upper():
+                        foxpoints += 1
+        return foxpoints
 
-        def danapoints(idlist):
-                danacombination = ("Y","Y","N","N","N")
-                danapoints = 0
-                for trait in range(5):
-                        if danacombination[trait] == idlist[trait].upper():
-                                danapoints += 1
-                return danapoints
+def danapoints(idlist):
+        danacombination = ("Y","Y","N","N","N")
+        danapoints = 0
+        for trait in range(5):
+                if danacombination[trait] == idlist[trait].upper():
+                        danapoints += 1
+        return danapoints
 
-        #Not yet sure if this is useful might delete later
-        def pointstranslate(points):
-                response = "should be overwritten"
-                if points == 5:
-                        response = "We are going home together Pur-riend"
-                elif points == 4:
-                        response = "Purrr... Give me a sec To think about it..."
-                elif points == 3:
-                        response = "I'm still deciding... But If I go with you, you have to be a better Owner! Meow!"
-                else:
-                        response = "Meow, I don't think this is going to work out... I don't want to go home with you."
-                return response
+#Not yet sure if this is useful might delete later
+def pointstranslate(points):
+        response = "should be overwritten"
+        if points == 5:
+                response = "We are going home together Pur-riend"
+        elif points == 4:
+                response = "Purrr... Give me a sec To think about it..."
+        elif points == 3:
+                response = "I'm still deciding... But If I go with you, you have to be a better Owner! Meow!"
+        else:
+                response = "Meow, I don't think this is going to work out... I don't want to go home with you."
+        return response
 
-        def adoptcat(points):
-                import random
-                adopt = 99999 # should be over written to 0 or 1. Zero NO ADOPT. One ADOPT
-                if points == 5:
-                        adopt = 1
-                elif points == 4:
-                        chance = random.randint(1,10)
-                        if chance <= 2:
-                                adopt = 0
-                        else:
-                                adopt = 1
-                elif points == 3:
-                        chance = random.randint(1,10)
-                        if chance <= 4:
-                                adopt = 0
-                        else:
-                                adopt = 1
-                else:
-                        adopt = 2 # Set to this so the if else statement on the vince main fuinction wont return anything since the translate function already said bye. Will fix later
-                return adopt
-
-
-
+def adoptcat(points):
         import random
+        adopt = 99999 # should be over written to 0 or 1. Zero NO ADOPT. One ADOPT
+        if points == 5:
+                adopt = 1
+        elif points == 4:
+                chance = random.randint(1,10)
+                if chance <= 2:
+                        adopt = 0
+                else:
+                        adopt = 1
+        elif points == 3:
+                chance = random.randint(1,10)
+                if chance <= 4:
+                        adopt = 0
+                else:
+                        adopt = 1
+        else:
+                adopt = 0
+        return adopt
+
+def main(purrpoints,adoptedcatlist,username,lives):
+        import random
+        #purrpoints = fpurrpoints
+        #lives = flives
         # Introduction to the Location
-        print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you! We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username "and stay as long as you would like!")
-        print(username + ", Here you'll meet 4 new cat friends!")
+        print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
+        print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username + "... and stay as long as you would like!")
+        print("Here you'll have the posibility to meet 4 new different Cats")
+        print()
+        print("NOTE: Each location has it's own quirk!")
+        print("Kitten City Rescue still gives you PurrPoints even if the cat does not want to be adopted") #Ask the team if this is okay. Easy fix
+        print("This Shelter always asks you 5 questions for each cat. Every correct answer earns you 1 PurrPoint!")
+        print()
+        print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
+        print()
+        print(username + " currently you have " + str(lives) + " life points left")
+        print("We hope you enjoy meeting our cats! Good luck!")
         print()
 
-        adoptedcatlist = [] #change to the dictionary
-        purrpoints = 0 #change to the dictionary
-        lives = 1 #change to the dictionary
-
         adoptedcatlist = []
+        purrpoints = 0
+        lives = 1
+
         loc2catlist = ["yams", "leaf", "fox", "dana"]
         random.shuffle(loc2catlist)
 
@@ -560,35 +570,29 @@ def main(userstate):
                         print("Sorry, you have lost a life")
                         lives -= 1#change to to use the master
                         if lives == 0:
-                                break
-                print()
+                                #break
+                                print()
+        return (purrpoints,lives)
 
-        if lives == 0:
-                print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
-        print ("Here is you game summary: ")
-        print ("Cats Adopted")
-        print (adoptedcatlist)
-        print ("PurrPoints")
-        print (purrpoints)
 
         # extra goodbye code
-#                 print("""       
-#        _                        
-#        \`*-.                    
-#         )  _`-.                 
-#        .  : `. .                
-#        : _   '  \               
-#        ; *` _.   `*-._          
-#        `-.-'          `-.       
-#          ;       `       `.     
-#          :.       .        \    
-#          . \  .   :   .-'   .   
-#          '  `+.;  ;  '      :   
-#          :  '  |    ;       ;-. 
-#          ; '   : :`-:     _.`* ;
-#       .*' /  .*' ; .*`- +'  `*' 
-#       `*-*   `*-*  `*-*'"""
-#         )
+#         print("""Thank you so much for coming to Kitty City Rescue! We hope you had a wonderful visit...      
+#         _                        
+#         \`*-.                    
+#          )  _`-.                 
+#         .  : `. .                
+#         : _   '  \               
+#         ; *` _.   `*-._          
+#         `-.-'          `-.       
+#           ;       `       `.     
+#           :.       .        \    
+#           . \  .   :   .-'   .   
+#           '  `+.;  ;  '      :   
+#           :  '  |    ;       ;-. 
+#           ; '   : :`-:     _.`* ;
+#        .*' /  .*' ; .*`- +'  `*' 
+#        `*-*   `*-*  `*-*'
+#         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
         main({'points':0, 'cats_collected':[], 'username':'', 'userlives':''})

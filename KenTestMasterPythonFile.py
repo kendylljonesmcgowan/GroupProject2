@@ -106,7 +106,7 @@ def main():
 
 
 if __name__=='__main__':  #calling defined function 'main'
-    main({'points':0, 'cats_collected':[], 'username':'', 'userlives':''})
+    main()
 
 
 

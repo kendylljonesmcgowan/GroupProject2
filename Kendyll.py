@@ -609,6 +609,6 @@ def main(userstate):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main({'points':0, 'cats_collected':[], 'username':'', 'userlives':''})
+        main()
         #(username, points, cats_collected)
         

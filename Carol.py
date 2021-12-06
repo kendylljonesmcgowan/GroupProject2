@@ -59,12 +59,12 @@ def main():
     #print(userstate['username'])
     
 
-lives = 9
-def main(nolivesremaining):
-  # WITHIN LOOP: likely has to be defined and called after every full cat event
-  if lives == 0:
-    break # this will break the whole game loop onces lives have run out IF IN OUTER LOOP
-    # end of FULL GAME LOOP due to loop break
+# lives = 9
+# def main(nolivesremaining):
+#   # WITHIN LOOP: likely has to be defined and called after every full cat event
+#   if lives == 0:
+#     break # this will break the whole game loop onces lives have run out IF IN OUTER LOOP
+#     # end of FULL GAME LOOP due to loop break
 
 adopted_cats = {}
 purr_points = 0

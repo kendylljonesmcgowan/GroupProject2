@@ -21,10 +21,12 @@ def main(location_exception):
 lives = 9
 purr_points = 0
 
-# WITHIN LOOP: likely has to be defined and called after every full cat event
-if lives == 0:
-  break # this will break the whole game loop onces lives have run out
-# end of FULL GAME LOOP due to loop break
+def main(nolivesremaining):
+  # WITHIN LOOP: likely has to be defined and called after every full cat event
+  if lives == 0:
+    break # this will break the whole game loop onces lives have run out IF IN OUTER LOOP
+    # end of FULL GAME LOOP due to loop break
+
 def main(end_statements):
   if lives == 0:
     print("You've run out of lives!")
@@ -35,20 +37,25 @@ def main(end_statements):
     print("You adopted the following cats:"+ adopted_cats + "!")
     print("Purr points collected:" + purr_points + ";  Lives remaining:" + lives)
 
+def main(cat_interactions):
 # while loop for individual cat??
 negative_interactions = 0
 positive_interactions = 0
+cats_interacted_with = 0
 while negative_interactions < 3:
   print(action_options)
   action = input("  What would you like to do with", current_cat, "? :  ")
   if action = False:
     negative_interactions+=1
     print("negative interaction statment for cat")
+    cats_interacted_with+=1
   else:
     positive_interactions+=1
     print("positive interaction statement for cat")
+    cats_interacted_with+=1
 
 # negative interactions in 3rd and following interactions with cats within cat interaction events
+def main(lostlife):
 if negative_interactions == 3:
   print("Oh meow!! This cat doesn't want to come home with you!")
   lives-=1

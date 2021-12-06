@@ -64,18 +64,10 @@ def main():
         elif loc == "LCarol":
             print("call main function of your program here Carol")
             #test
-            vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            print(vincetuple2)
-            userstate['points'] = vincetuple2[0]
-            userstate['lives'] = vincetuple2[1]
             if userstate['lives'] == 0:
                 break
         else:
             print("call main function of your program here Vince")
-            vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            print(vincetuple)
-            userstate['points'] = vincetuple[0]
-            userstate['lives'] = vincetuple[1]
             if userstate['lives'] == 0:
                 break
 

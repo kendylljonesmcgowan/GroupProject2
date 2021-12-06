@@ -617,6 +617,6 @@ def main(userstate):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main()
+        main('userstate')
         #(username, points, cats_collected)
         

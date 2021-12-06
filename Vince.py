@@ -7,8 +7,8 @@ def userinput():
     ibrush = str(input("    Brush Me (Y/N): "))
     ipet = str(input("    Pet Me (Y/N): "))
     iother = str(input("    Have you already adopted another cat (Y/N): "))
-    iplay = str(input("    B Me (Y/N): "))
-    itreat = str(input("    Brush Me (Y/N): "))
+    iplay = str(input("    Play with Me (Y/N): "))
+    itreat = str(input("    Give Treat (Y/N): "))
     inputlist = [ibrush,ipet,iother,iplay,itreat]
     return inputlist
 
@@ -46,30 +46,17 @@ def tobipoints(itlist):
 
 #Not yet sure if this is useful might delete later
 def pointstranslate(points):
-    response = "should be overwritten"
+    response = "This Should be Overwritten"
     if points == 5:
-        response = "We are going home together Pur-riend"
+        response = "CONGRATULATIONS! We are going home together Pur-riend"
     elif points == 4:
-        response = "Give me a sec! To think about it"
+        response = "Give me a sec to think about it!"
     elif points == 3:
         response = "I'm still deciding. But If I go with you, you have to be a better Owner! Meow!"
     else:
-        response = """ 
-        Don't like you Meow
-            |\___/|
-            )     (
-           =\     /=
-             )===(
-            /     \
-            |     |
-           /       \
-           \       /
-            \__  _/
-              ( (
-               ) )
-              (_(
-        """
+        response = "I don't wanna go with you! We are just too different!"
     return response
+
 
 def adoptcat(points):
     import random
@@ -89,155 +76,191 @@ def adoptcat(points):
         else:
             adopt = 1
     else:
-        adopt = 2 # Set to this so the if else statement on the vince main fuinction wont return anything since the translate function already said bye. Will fix later
+        adopt = 0
     return adopt
 
 
+def main(fpurrpoints,adoptedcatlist,name,flives):
+    import random
+    purrpoints = fpurrpoints
+    lives = flives
+    # Introduction to the Location
+    # Additional Instruction for the player for the location quirk
+    print("Welcome, " + name + " to AllPaws Cat Shelter") #Add User/Player Name
+    print("Here you'll have the posibility to meet 4 new different Cats")
+    print()
+    print("NOTE: Each location has their own quirk!!!!")
+    print("AllPaws Cat Shelter still gives you PurrPoints even if the cat does not want to be adopted") #Ask the team if this is okay. Easy fix
+    print("This Shelter always asks you 5 questions for each cat. Every correct answer earns you 1 PurrPoint.")
+    print()
+    print("REMEMBER: Every cat that chooses not to be adopted you lose a life!")
+    print()
+    print("You " + name + " currently you have " + str(lives) + " life points left")
+    print("Get ready to meet our cats!")
+    print()
 
-import random
-# Introduction to the Location
-print("Welcome, AllPaws Cat Shelter")
-print("Here you'll meet 4 new different cats")
-print()
 
-adoptedcatlist = []
-loc4catlist = ["loki", "boo", "wanda", "tobi"]
-random.shuffle(loc4catlist)
 
-print(loc4catlist)
-print()
-for cats in loc4catlist:
-    if cats == "loki":
-        print("Meow, I’m Loki, I’m a beautiful Ragdoll Cat. I like warm places, and lounging in my favorite snuggly blanket. Paw-don me if I’m a little bit hiss-terical with kids, I’m just a little old now but I’m fiercely loyal kinda like a dog, but better because dogs are in-furior to cats. Duh!")
-        lokiinput = userinput()
-        print(lokiinput)
-        print()
-        print("The number of PurrPoints you got from Loki is: ", lokipoints(lokiinput))
-        print()
-        print(pointstranslate(lokipoints(lokiinput)))
-        lokiadopt = adoptcat(lokipoints(lokiinput))
-        if lokiadopt == 1:
-            adoptedcatlist.append(cats)
-            print("(=⚈ᆽ⚈=)")
-            print("Friends forever") #make more puns
-        elif lokiadopt == 0:
-            print(
-            """Don't like you Meow
-            |\___/|
-            )     (
-           =\     /=
-             )===(
-            /     \
-            |     |
-           /       \
-           \       /
-            \__  _/
-              ( (
-               ) )
-              (_(
-            """)
-        print()
+    loc4catlist = ["loki", "boo", "wanda", "tobi"]
+    random.shuffle(loc4catlist)
+    print(loc4catlist) # DELETE Later
+
+    print()
+    for cats in loc4catlist:
+        if cats == "loki":
+            print()
+            print("Meow, I’m Loki, I’m a beautiful Ragdoll Cat. I like warm places, and lounging in my favorite snuggly blanket. Paw-don me if I’m a little bit hiss-terical with kids, I’m just a little old now but I’m fiercely loyal kinda like a dog, but better because dogs are in-furior to cats. Duh!")
+            lokiinput = userinput()
+            print()
+            print("The number of PurrPoints you got from Loki is: ", lokipoints(lokiinput))
+            purrpoints += lokipoints(lokiinput) #change to to use the master  
+            print()
+            print(pointstranslate(lokipoints(lokiinput)))
+            lokiadopt = adoptcat(lokipoints(lokiinput))
+            if lokiadopt == 1:
+                adoptedcatlist.append(cats) #change to to use the master
+                print("Loki, has chosen to be Adopted and Become Friends FURever")
+            elif lokiadopt == 0:
+                print(
+                """Hello, LOKI here! I DON'T like you! Meow!
+                 |\___/|
+                 )     (
+                =\     /=
+                  )===(
+                 (     )
+                 |     |
+                (       )      
+                \       /
+                 \__  _/
+                   ( (
+                    ) )
+                   (_(
+                """)
+                print("Sorry have lost a life")
+                lives -= 1#change to to use the master
+                if lives == 0:
+                    break
+            print()
+            
+
+
+        elif cats == "boo":
+            print()
+            print("Meow, I’m Boo! I’m a Persian kitten, please whisker me away to places because I love exploring! When I grow up, I want to join the olympics, because I’m cathletic! I love everyone including the UPS guy who brings me treats sometimes. I’m sure you’re going to love me meow until fur-ever!")
+            booinput = userinput()
+            print()
+            print("The number of PurrPoints you got from Boo is: ", boopoints(booinput))
+            purrpoints += boopoints(booinput) #change to to use the master  
+            print()
+            print(pointstranslate(boopoints(booinput)))
+            booadopt = adoptcat(boopoints(booinput))
+            if booadopt == 1:
+                adoptedcatlist.append(cats) #change to to use the master
+                print("BOO, has chosen to be Adopted and Become Friends FURever")
+            elif booadopt == 0:
+                print(
+                """Hello, BOO here! I DON'T like you! Meow!
+                 |\___/|
+                 )     (
+                =\     /=
+                  )===(
+                 (     )
+                 |     |
+                (       )      
+                \       /
+                 \__  _/
+                   ( (
+                    ) )
+                   (_(
+                """)
+                lives -= 1#change to to use the master
+                if lives == 0:
+                    break
+            print()
+
+
+
+        elif cats == "wanda":
+            print()
+            print("Meow, are you feline good? I’m Wanda,and I love people. I dream of becoming the UN ambassador for Cat-nada! Snuggling is my number one priority! If only people were half as friendly as me, then the world would be paw-some.")
+            wandainput = userinput()
+            print()
+            print("The number of PurrPoints you got from Wanda is: ", wandapoints(wandainput))
+            purrpoints += wandapoints(wandainput) #change to to use the master 
+            print()
+            print(pointstranslate(wandapoints(wandainput)))
+            wandaadopt = adoptcat(wandapoints(wandainput))
+            if wandaadopt == 1:
+                adoptedcatlist.append(cats) #change to to use the master   
+                print("WANDA, has chosen to be Adopted and Become Friends FURever")
+            elif wandaadopt == 0:
+                print(
+                """Hello, WANDA here! I DON'T like you! Meow!
+                 |\___/|
+                 )     (
+                =\     /=
+                  )===(
+                 (     )
+                 |     |
+                (       )      
+                \       /
+                 \__  _/
+                   ( (
+                    ) )
+                   (_(
+                """)
+                lives -= 1#change to to use the master
+                if lives == 0:
+                    break
+            print()
+
+
         
+        else:
+            print()
+            print("Meow, I’m Tobi! I’m a Burmese Cat. If I brush against you, that’s code for “Snuggles paw-lease”. Call the claw-enforcement because I will follow you all day, sit next to you, and brush against you!! What can I say? I just love you meowst.")
+            tobiinput = userinput()
+            print()
+            print("The number of PurrPoints you got from Tobi is: ", tobipoints(tobiinput))
+            purrpoints += tobipoints(tobiinput) #change to to use the master  
+            print()
+            print(pointstranslate(tobipoints(tobiinput)))
+            tobiadopt = adoptcat(tobipoints(tobiinput))
+            if tobiadopt == 1:
+                adoptedcatlist.append(cats) #change to to use the master  
+                print("TOBI, has chosen to be Adopted and Become Friends FURever")
+            elif tobiadopt == 0:
+                print(
+                """Hello, TOBI here! I DON'T like you! Meow!
+                 |\___/|
+                 )     (
+                =\     /=
+                  )===(
+                 (     )
+                 |     |
+                (       )      
+                \       /
+                 \__  _/
+                   ( (
+                    ) )
+                   (_(
+                """)
+                lives -= 1 #change to to use the master
+                if lives == 0:
+                    break
+            print()
+    return (purrpoints,lives)
 
 
-    elif cats == "boo":
-        print("Meow, I’m Boo! I’m a Persian kitten, please whisker me away to places because I love exploring! When I grow up, I want to join the olympics, because I’m cathletic! I love everyone including the UPS guy who brings me treats sometimes. I’m sure you’re going to love me meow until fur-ever!")
-        booinput = userinput()
-        print(booinput)
-        print()
-        print("The number of PurrPoints you got from Boo is: ", boopoints(booinput))
-        print()
-        print(pointstranslate(boopoints(booinput)))
-        print()
-        booadopt = adoptcat(boopoints(booinput))
-        if booadopt == 1:
-            adoptedcatlist.append(cats)
-            print("(=⚈ᆽ⚈=)")
-            print("Friends forever") #make more puns
-        elif booadopt == 0:
-            print(
-            """Don't like you Meow
-            |\___/|
-            )     (
-           =\     /=
-             )===(
-            /     \
-            |     |
-           /       \
-           \       /
-            \__  _/
-              ( (
-               ) )
-              (_(
-            """)
-        print()
+# if __name__=='__main__':  #calling defined function 'main'
 
 
+#     userstate = {'points':0, 'cats_collected':[], 'username':'Pecus', 'lives':1 }
 
-    elif cats == "wanda":
-        print("Meow, are you feline good? I’m Wanda,and I love people. I dream of becoming the UN ambassador for Cat-nada! Snuggling is my number one priority! If only people were half as friendly as me, then the world would be paw-some.")
-        wandainput = userinput()
-        print(wandainput)
-        print()
-        print("The number of PurrPoints you got from Wanda is: ", wandapoints(wandainput))
-        print()
-        print(pointstranslate(wandapoints(wandainput)))
-        print()
-        wandaadopt = adoptcat(wandapoints(wandainput))
-        if wandaadopt == 1:
-            adoptedcatlist.append(cats)
-            print("(=⚈ᆽ⚈=)")
-            print("Friends forever") #make more puns
-        elif wandaadopt == 0:
-            print(
-            """Don't like you Meow
-            |\___/|
-            )     (
-           =\     /=
-             )===(
-            /     \
-            |     |
-           /       \
-           \       /
-            \__  _/
-              ( (
-               ) )
-              (_(
-            """)
-        print()
+#     main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
 
-
-    
-    else:
-        print("Meow, I’m Tobi! I’m a Burmese Cat. If I brush against you, that’s code for “Snuggles paw-lease”. Call the claw-enforcement because I will follow you all day, sit next to you, and brush against you!! What can I say? I just love you meowst.")
-        tobiinput = userinput()
-        print(tobiinput)
-        print()
-        print("The number of PurrPoints you got from Tobi is: ", tobipoints(tobiinput))
-        print()
-        print(pointstranslate(tobipoints(tobiinput)))
-        print()
-        tobiadopt = adoptcat(tobipoints(tobiinput))
-        if tobiadopt == 1:
-            adoptedcatlist.append(cats)
-            print("(=⚈ᆽ⚈=)")
-            print("Friends forever") #make more puns
-        elif tobiadopt == 0:
-            print(
-            """Don't like you Meow
-            |\___/|
-            )     (
-           =\     /=
-             )===(
-            /     \
-            |     |
-           /       \
-           \       /
-            \__  _/
-              ( (
-               ) )
-              (_(
-            """)
-        print()
-
+#     if userstate['lives']:
+#         print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
+#         print ("Here is you game summary: ")
+#         print (userstate)
 

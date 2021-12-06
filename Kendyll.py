@@ -365,10 +365,12 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(points,cats_collected,username,userlives):
+def main(userstate):
         import random
-        #purrpoints = fpurrpoints
-        #lives = flives
+        username = userstate['username']
+        points = userstate['points']
+        cats_collected = userstate['cats_collected']
+        userlives = userstate['userlives']
         # Introduction to the Location
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username + "... and stay as long as you would like!")

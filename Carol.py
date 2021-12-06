@@ -104,7 +104,30 @@ def main(end_statements):
 #   break     # will only affect the loop it is within, if nested outer loop will still run
 
 
-# DON'T DELETE THIS
+# DON'T DELETE THIS?
 if __name__=='__main__':  #calling defined function 'main
     username = input("What is your name?")
     main(username)
+
+# print("""
+#          *                  *
+#              __                *
+#           ,db'    *     *
+#          ,d8/       *        *    *
+#          888
+#          `db\       *     *
+#            `o`_                    **
+#       *               *   *    _      *
+#             *                 / )
+#          *    (\__/) *       ( (  *
+#        ,-.,-.,)    (.,-.,-.,-.) ).,-.,-.
+#       | @|  ={      }= | @|  / / | @|o |
+#      _j__j__j_)     `-------/ /__j__j__j_
+#      ________(               /___________
+#       |  | @| \              || o|O | @|
+#       |o |  |,'\       ,   ,'"|  |  |  |  hjw
+#      vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//v
+#                 _) )    `. \ /
+#                (__/       ) )
+#                          (_/
+# """)

@@ -41,24 +41,26 @@ def main(cat_interactions):
 # while loop for individual cat??
 negative_interactions = 0
 positive_interactions = 0
-cats_interacted_with = 0
 while negative_interactions < 3:
   print(action_options)
   action = input("  What would you like to do with", current_cat, "? :  ")
   if action = False:
     negative_interactions+=1
     print("negative interaction statment for cat")
-    cats_interacted_with+=1
   else:
     positive_interactions+=1
     print("positive interaction statement for cat")
-    cats_interacted_with+=1
+  
+  cats_interacted_with+=1
 
+
+cats_interacted_with = 0
 # negative interactions in 3rd and following interactions with cats within cat interaction events
 def main(lostlife):
 if negative_interactions == 3:
   print("Oh meow!! This cat doesn't want to come home with you!")
   lives-=1
+  cats_interacted_with+=1
   break     # will only affect the loop it is within, if nested outer loop will still run
 
 

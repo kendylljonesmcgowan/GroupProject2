@@ -29,46 +29,53 @@ def get_name():
     return input("Gamer, what is your name? ")
 
 
-#call in CSV
-#open file catdata.csv for reading
 
-# with open('catdata.csv') as catdata:
-#     for cat in catdata:
 
 
 
 
 #defines a function with an array containing the four different location files
 #random.shuffle returns the list in a random order
-def locations():
-    location = [Rachel, Vince, Kendyll, Carol]
-    random.shuffle(location)
-    return location
+
 
 #defining the main program function
 def main():
-    #base point assignment
-    #points = 0
-
-    #TODO create lives key and value for dic below 
+    location = ["LRachel", "LVince", "LKendyll", "LCarol"]
+    random.shuffle(location)
+    print(location)
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ' }
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
 
-    #collected cats array below
-    #cats_collected = []
     #call in print_intro
     print_intro()
+
     #get the user's name
-    username = get_name()
-    userstate['username'] = username
+    print()
+    userstate['username'] = str(input("   Gamer, what is your name? "))
+    #print(userstate['username'])
     
-    #Delete Rachel. for running the game.
-    userstate = Rachel.main(userstate)
 
     #for loop to iterate through each location
-    #uncomment to run game.
+    for loc in location:
+        if loc == "LRachel":
+            print("call main function of your program here Kendyll")
+            Rachel.main(userstate)
+            if userstate['lives'] == 0:
+                break
+        elif loc == "LKendyll":
+            print("call main function of your program here Kendyll")
+            if userstate['lives'] == 0:
+                break
+        elif loc == "LCarol":
+            print("call main function of your program here Carol")
+            if userstate['lives'] == 0:
+                break
+        else:
+            print("call main function of your program here Vince")
+            if userstate['lives'] == 0:
+                break
 
     #TODO add function to end game with if user has gone through all four locations and still has lives, then end game and print out .txt file with results
     #add game ending 

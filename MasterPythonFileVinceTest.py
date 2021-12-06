@@ -9,7 +9,7 @@ import math
 import random
 
 import Rachel
-# import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
+import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
 # import Kendyll
 # import Carol
 
@@ -23,30 +23,18 @@ def print_intro():
     print(' =^..^= ')
     print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
-    
-#function to get user to imput name
-def get_name():
-    return input("Gamer, what is your name? ")
-
-
-
-
-
-
-
-#defines a function with an array containing the four different location files
-#random.shuffle returns the list in a random order
 
 
 #defining the main program function
 def main():
+    #random.shuffle returns the list in a random order
     location = ["LRachel", "LVince", "LKendyll", "LCarol"]
     random.shuffle(location)
     print(location)
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':3 }
 
     #call in print_intro
     print_intro()
@@ -54,14 +42,15 @@ def main():
     #get the user's name
     print()
     userstate['username'] = str(input("   Gamer, what is your name? "))
+    print()
     #print(userstate['username'])
     
 
     #for loop to iterate through each location
     for loc in location:
         if loc == "LRachel":
-            print("call main function of your program here Kendyll")
-            Rachel.main(userstate)
+            print("call main function of your program here Rachel")
+            #Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
         elif loc == "LKendyll":
@@ -70,20 +59,46 @@ def main():
                 break
         elif loc == "LCarol":
             print("call main function of your program here Carol")
+            #test
+            vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            print(vincetuple2)
+            userstate['points'] = vincetuple2[0]
+            userstate['lives'] = vincetuple2[1]
             if userstate['lives'] == 0:
                 break
         else:
             print("call main function of your program here Vince")
+            vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            print(vincetuple)
+            userstate['points'] = vincetuple[0]
+            userstate['lives'] = vincetuple[1]
             if userstate['lives'] == 0:
                 break
 
     #TODO add function to end game with if user has gone through all four locations and still has lives, then end game and print out .txt file with results
-    #add game ending 
+    #add game ending
 
-    #NOTE use this code for running the game through all four locations
-    #NOTE when using this, delete --> userstate = Rachel.main(userstate)
-    # for location in locations():
-    #    userstate = location.main(userstate)
+    #Will be fixed to look better
+    if userstate['lives'] == 0:
+        print()
+        print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
+        print ("Here is you game summary: ")
+        print ("Cats Adopted")
+        print (userstate["cats_collected"])
+        print ("PurrPoints")
+        print (userstate["points"])
+    else:
+        print()
+        print ("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMEOW!!!!!!")
+        print ("Congratulations for Finishing the the game!")
+        print ("Here is you game summary: ")
+        print ("Cats Adopted")
+        print (userstate["cats_collected"])
+        print ("PurrPoints")
+        print (userstate["points"])
+        print ("Lives Left")
+        print (userstate["lives"])
+
 
 
 if __name__=='__main__':  #calling defined function 'main'

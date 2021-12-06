@@ -365,7 +365,7 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(purrpoints,adoptedcatlist,username,lives):
+def main(points,cats_collected,username,userlives):
         import random
         #purrpoints = fpurrpoints
         #lives = flives
@@ -380,13 +380,13 @@ def main(purrpoints,adoptedcatlist,username,lives):
         print()
         print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
         print()
-        print(username + " currently you have " + str(lives) + " life points left")
+        print(username + " currently you have " + str(userlives) + " life points left")
         print("We hope you enjoy meeting our cats! Good luck!")
         print()
 
-        adoptedcatlist = []
-        purrpoints = 0
-        lives = 1
+        cats_collected = []
+        points = 0
+        userlives = 1
 
         loc2catlist = ["yams", "leaf", "fox", "dana"]
         random.shuffle(loc2catlist)
@@ -404,7 +404,7 @@ def main(purrpoints,adoptedcatlist,username,lives):
                         print(pointstranslate(yamspoints(yamsinput)))
                         yamsadopt = adoptcat(yamspoints(yamsinput))
                         if yamsadopt == 1:
-                                adoptedcatlist.append(cats)
+                                cats_collected.append(cats)
                                 print("""
                    _ |\_
                    \` ..\
@@ -432,8 +432,8 @@ def main(purrpoints,adoptedcatlist,username,lives):
          \  '-----' _.-` '._)
           `'-------'""")
                                 print("Sorry, you have lost a life")
-                                lives -= 1#change to to use the master
-                                if lives == 0:
+                                userlives -= 1#change to to use the master
+                                if userlives == 0:
                                         break
                         print()
 
@@ -449,7 +449,7 @@ def main(purrpoints,adoptedcatlist,username,lives):
                         print()
                         leafadopt = adoptcat(leafpoints(leafinput))
                         if leafadopt == 1:
-                                adoptedcatlist.append(cats)
+                                cats_collected.append(cats)
                                 print("""       
    /\_/\
    >^.^<.---.
@@ -476,8 +476,8 @@ def main(purrpoints,adoptedcatlist,username,lives):
           ( / \ )
             """)
                                 print("Sorry, you have lost a life")
-                                lives -= 1#change to to use the master
-                                if lives == 0:
+                                userlives -= 1#change to to use the master
+                                if userlives == 0:
                                         break
                         print()
 
@@ -493,7 +493,7 @@ def main(purrpoints,adoptedcatlist,username,lives):
                         print()
                         foxadopt = adoptcat(foxpoints(foxinput))
                         if foxadopt == 1:
-                                adoptedcatlist.append(cats)
+                                cats_collected.append(cats)
                                 print("""
                       ,
                     _/((
@@ -523,8 +523,8 @@ def main(purrpoints,adoptedcatlist,username,lives):
               (_(
             """)
                                 print("Sorry, you have lost a life")
-                                lives -= 1#change to to use the master
-                                if lives == 0:
+                                userlives -= 1#change to to use the master
+                                if userlives == 0:
                                         break
                         print()
 
@@ -541,7 +541,7 @@ def main(purrpoints,adoptedcatlist,username,lives):
                 print()
                 danaadopt = adoptcat(danapoints(danainput))
                 if danaadopt == 1:
-                        adoptedcatlist.append(cats)
+                        cats_collected.append(cats)
                         print("""
                  (\(\
                  / ..(
@@ -568,11 +568,11 @@ def main(purrpoints,adoptedcatlist,username,lives):
                (__/       ) ) 
                          (_/""")
                         print("Sorry, you have lost a life")
-                        lives -= 1#change to to use the master
-                        if lives == 0:
+                        userlives -= 1#change to to use the master
+                        if userlives == 0:
                                 #break
                                 print()
-        return (purrpoints,lives)
+        return (points,userlives)
 
 
         # extra goodbye code
@@ -597,3 +597,4 @@ def main(purrpoints,adoptedcatlist,username,lives):
 if __name__ == '__main__':
         main({'points':0, 'cats_collected':[], 'username':'', 'userlives':''})
         #(username, points, cats_collected)
+        

@@ -373,24 +373,28 @@ def main(userstate):
         userlives = userstate['userlives']
 
         # Introduction to the Location
+        print()
+        print()
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username + "... and stay as long as you would like!")
+        print()
         print("Here you'll have the posibility to meet 4 new different Cats")
         print()
         print("NOTE: Each location has it's own quirk!")
+        print()
         print("Kitten City Rescue still gives you PurrPoints even if the cat does not want to be adopted") #Ask the team if this is okay. Easy fix
         print("This Shelter always asks you 5 questions for each cat. Every correct answer earns you 1 PurrPoint!")
         print()
         print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
         print()
         print(username + " currently you have " + str(userlives) + " life points left")
+        print()
         print("We hope you enjoy meeting our cats! Good luck!")
         print()
 
         loc2catlist = ["yams", "leaf", "fox", "dana"]
         random.shuffle(loc2catlist)
 
-        print(loc2catlist)
         print()
         for cats in loc2catlist:
                 if cats == "yams":
@@ -412,6 +416,7 @@ def main(userstate):
       _    /   ,    \/\_
      ((____|    )_-\ \_-`
      `-----'`-----` `--`""")
+                                print()
                                 print("Meow! I am so excited to go home with you. Friends fuuurever! Let's go outside for a walk!") #make more puns
                         elif yamsadopt == 0:
                                 print(
@@ -430,6 +435,7 @@ def main(userstate):
          |        /_;-` _`'.
          \  '-----' _.-` '._)
           `'-------'""")
+                                print()
                                 print("Sorry, you have lost a life")
                                 userlives -= 1#change to to use the master
                                 if userlives == 0:
@@ -455,6 +461,7 @@ def main(userstate):
   _'-`-'     )\
  (6--\ |--\ (`.`-.
      --'  --'  ``-'""")
+                                print()
                                 print("Meow! I am so excited to go home with you. Friends fuuurever! I am going to nap alone in the corner now.")
                         elif leafadopt == 0:
                                 print(
@@ -474,6 +481,7 @@ def main(userstate):
            _|||_
           ( / \ )
             """)
+                                print()
                                 print("Sorry, you have lost a life")
                                 userlives -= 1#change to to use the master
                                 if userlives == 0:
@@ -504,6 +512,8 @@ def main(userstate):
         \ \-.__)    ``--._)
          '.'-.__.-.
            '-...-'  """)
+                                print()
+                                print()
                                 print("Meow! I am so excited to go home with you. Friends fuuurever! Let's go bird watching!")
                         elif foxadopt == 0:
                                 print(
@@ -521,6 +531,7 @@ def main(userstate):
                ) )
               (_(
             """)
+                                print()
                                 print("Sorry, you have lost a life")
                                 userlives -= 1#change to to use the master
                                 if userlives == 0:
@@ -550,6 +561,8 @@ def main(userstate):
           _|  _/| //
         .',_\__)\_))
         '----,)""")
+                        print()
+                        print()
                         print("Meow! I am so excited to go home with you. Friends fuuurever! Let's go nap!") #make more puns
                 elif danaadopt == 0:
                         print(
@@ -566,6 +579,7 @@ def main(userstate):
                 _) )    `. \ /
                (__/       ) ) 
                          (_/""")
+                        print()
                         print("Sorry, you have lost a life")
                         userlives -= 1#change to to use the master
                         if userlives == 0:

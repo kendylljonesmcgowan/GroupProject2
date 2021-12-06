@@ -365,14 +365,16 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(fpurrpoints,adoptedcatlist,name,flives):
+def main(userstate):
         import random
-        purrpoints = fpurrpoints
-        lives = flives
-        # username = userstate['username']
-        # points = userstate['points']
-        # cats_collected = userstate['cats_collected']
-        # userlives = userstate['userlives']
+        # purrpoints = fpurrpoints
+        # lives = flives
+        # adoptedcatlist
+        # name
+        name = userstate['username']
+        purrpoints = userstate['points']
+        adoptedcatlist = userstate['cats_collected']
+        lives = userstate['userlives']
 
         # Introduction to the Location
         print()
@@ -389,7 +391,7 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
         print()
         print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
         print()
-        print(name + " currently you have " + str(flives) + " life points left")
+        print(name + " currently you have " + str(lives) + " life points left")
         print()
         print("We hope you enjoy meeting our cats! Good luck!")
         print()
@@ -440,8 +442,8 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
           `'-------'""")
                                 print()
                                 print("Sorry, you have lost a life")
-                                flives -= 1     #change
-                                if flives == 0:
+                                lives -= 1     #change
+                                if lives == 0:
                                         break
                         print()
 
@@ -487,8 +489,8 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             """)
                                 print()
                                 print("Sorry, you have lost a life")
-                                flives -= 1#change to to use the master
-                                if flives == 0:
+                                lives -= 1#change to to use the master
+                                if lives == 0:
                                         break
                         print()
 
@@ -538,8 +540,8 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             """)
                                 print()
                                 print("Sorry, you have lost a life")
-                                flives -= 1#change to to use the master
-                                if flives == 0:
+                                lives -= 1#change to to use the master
+                                if lives == 0:
                                         break
                         print()
 
@@ -587,12 +589,12 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
                          (_/""")
                         print()
                         print("Sorry, you have lost a life")
-                        flives -= 1     #change to to use the master
-                        if flives == 0:
+                        lives -= 1     #change to to use the master
+                        if lives == 0:
                                 #break
                                 print()
-        print("You have earned" + fpurrpoints + "points, and have" + flives + "lives left!")
-        return (fpurrpoints,flives)
+        print("You have earned" + purrpoints + "points, and have" + lives + "lives left!")
+        return (purrpoints,lives)
 
 
         # extra goodbye code

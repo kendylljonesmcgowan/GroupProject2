@@ -8,9 +8,9 @@
 import math
 import random
 
-import Rachel
+#import Rachel
 # import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
-# import Kendyll
+import Kendyll
 # import Carol
 
 # Display program purpose
@@ -65,7 +65,7 @@ def main():
     userstate['username'] = username
     
     #Delete Rachel. for running the game.
-    userstate = Rachel.main(userstate)
+    userstate = Kendyll.main(userstate)
 
     #for loop to iterate through each location
     #uncomment to run game.

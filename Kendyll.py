@@ -371,6 +371,7 @@ def main(userstate):
         points = userstate['points']
         cats_collected = userstate['cats_collected']
         userlives = userstate['userlives']
+
         # Introduction to the Location
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + username + "... and stay as long as you would like!")
@@ -385,10 +386,6 @@ def main(userstate):
         print(username + " currently you have " + str(userlives) + " life points left")
         print("We hope you enjoy meeting our cats! Good luck!")
         print()
-
-        cats_collected = []
-        points = 0
-        userlives = 1
 
         loc2catlist = ["yams", "leaf", "fox", "dana"]
         random.shuffle(loc2catlist)

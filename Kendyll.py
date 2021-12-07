@@ -412,6 +412,7 @@ def main(mainpoints,maincatlist,username,livesleft):
                         if yamsadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!
                    _ |\_
                    \` ..|
               __,.-" =__Y=

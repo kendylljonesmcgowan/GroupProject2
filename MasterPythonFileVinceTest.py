@@ -10,7 +10,7 @@ import random
 
 import Rachel
 import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
-# import Kendyll
+import KendyllCopy
 # import Carol
 
 # Display program purpose
@@ -50,20 +50,23 @@ def main():
     for loc in location:
         if loc == "LRachel":
             print("call main function of your program here Rachel")
-            #Rachel.main(userstate)
+            # Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
         elif loc == "LKendyll":
             print("call main function of your program here Kendyll")
+            kendylltuple=(KendyllCopy.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
+            userstate['points'] = kendylltuple[0]
+            userstate['lives'] = kendylltuple[1]
             if userstate['lives'] == 0:
                 break
         elif loc == "LCarol":
             print("call main function of your program here Carol")
             #test
-            vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            print(vincetuple2)
-            userstate['points'] = vincetuple2[0]
-            userstate['lives'] = vincetuple2[1]
+            # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            # print(vincetuple2)
+            # userstate['points'] = vincetuple2[0]
+            # userstate['lives'] = vincetuple2[1]
             if userstate['lives'] == 0:
                 break
         else:

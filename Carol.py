@@ -13,8 +13,8 @@
 import math
 import random
 #define functions
-def main(username):
-    print("Hello " + username)
+# def main(username):
+#     print("Hello " + username)
 
 # list of dictionaries for cats at Happy Tails Rescue
 def happy_tails_cats():
@@ -125,34 +125,34 @@ def do_action(choice, cat, points):
 
 # from master file
 #defining print_intro as a funtion
-def print_intro():
-    print('=^..^=     ','=^..^=     ','=^..^=     ' )
-    print('      =^..^=     ','=^..^=     ')
-    print("Welcome to 'PURRfect Pals'")
-    print()
-    print(' =^..^= ')
-    print("Get ready to meet and adopt feline friends from four different cat rescues.")
-    print("Each cat is looking for their furrever home, will you be the purrfect match?")
+# def print_intro():
+#     print('=^..^=     ','=^..^=     ','=^..^=     ' )
+#     print('      =^..^=     ','=^..^=     ')
+#     print("Welcome to 'PURRfect Pals'")
+#     print()
+#     print(' =^..^= ')
+#     print("Get ready to meet and adopt feline friends from four different cat rescues.")
+#     print("Each cat is looking for their furrever home, will you be the purrfect match?")
 
 # from master file
 # sets up user variables!
-def main():
-    #random.shuffle returns the list in a random order
-    location = ["Rachel", "Vince", "Kendyll", "Carol"]
-    random.shuffle(location)
-    print(location)
+# def main():
+#     #random.shuffle returns the list in a random order
+#     location = ["Rachel", "Vince", "Kendyll", "Carol"]
+#     random.shuffle(location)
+#     print(location)
 
-    #user state to retain and hold accrued points and cats
-    #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
+#     #user state to retain and hold accrued points and cats
+#     #dictionary to get passed around location files and hold the state of the game
+#     userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
 
-    #call in print_intro
-    print_intro()
+#     #call in print_intro
+#     print_intro()
 
-    #get the user's name
-    print()
-    userstate['username'] = str(input("  Howdy there! What is your name? "))
-    print()
+#     #get the user's name
+#     print()
+#     userstate['username'] = str(input("  Howdy there! What is your name? "))
+#     print()
 
 def main(userstate):
     username = userstate['username']

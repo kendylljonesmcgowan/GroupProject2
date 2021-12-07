@@ -412,7 +412,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                                 adoptedcatlist.append(cats)
                                 print("""
                    _ |\_
-                   \` ..\
+                   \` ..|
               __,.-" =__Y=
             ."        )
       _    /   ,    \/\_
@@ -428,7 +428,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                /     \_  
                |  __==/
                /   (
-              ;     \
+              ;     |
              /      |
             /    ,  /
           .'      | |
@@ -459,9 +459,9 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         if leafadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""       
-   /\_/\
+   /\_/
    >^.^<.---.
-  _'-`-'     )\
+  _'-`-'     )|
  (6--\ |--\ (`.`-.
      --'  --'  ``-'""")
                                 print()
@@ -469,12 +469,12 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         elif leafadopt == 0:
                                 print(
                         """Meow, I don't think this is going to work out...
-            /\
-            \ \
-             \ \
+            /|
+            \ |
+             \ |
              / /
             / /
-           _\ \_/\/\
+           _\ \_/\/|
           /  *  \@@ =
          |       |Y/
          |       |~
@@ -486,7 +486,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
             """)
                                 print()
                                 print("Sorry, you have lost a life")
-                                lives -= 1#change to to use the master
+                                lives -= 1      #change to to use the master
                                 if lives == 0:
                                         break
                         print()
@@ -508,7 +508,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                                 print("""
                       ,
                     _/((
-           _.---. .'   `\
+           _.---. .'   `|
          .'      `     ^ T=
         /     \       .--'
        |      /       )'-.
@@ -526,9 +526,9 @@ def main(purrpoints,adoptedcatlist,name,lives):
             )     (
            =\     /=
              )===(
-            /     \
+            /     |
             |     |
-           /       \
+           /       |
            \       /
             \__  _/
               ( (
@@ -558,7 +558,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                 if danaadopt == 1:
                         adoptedcatlist.append(cats)
                         print("""
-                 (\(\
+                 (\(|
                  / ..(
               .-' ,_Y/
             .'     (
@@ -580,7 +580,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
              (              */
               \              |
              ,'\       ,    ,'
-             `-'\  ,---\   | \
+             `-'\  ,---\   | |
                 _) )    `. \ /
                (__/       ) ) 
                          (_/""")

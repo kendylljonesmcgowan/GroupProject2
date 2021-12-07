@@ -9,7 +9,7 @@ import math
 import random
 
 import Rachel
-import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
+import Vince
 import Kendyll
 import Carol
 
@@ -23,6 +23,12 @@ def print_intro():
     print(' =^..^= ')
     print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
+    print()
+    print("The Goal of the game is to adopt all 16 cats!")
+    print("And to collect as many PurrPoints as possible!")
+    print("You have 9 lives!!")
+    print("Note: Be sure to read the instruction for each location as there may be some quirks!!")
+
 
 
 #defining the main program function
@@ -30,11 +36,10 @@ def main():
     #random.shuffle returns the list in a random order
     location = ["LRachel", "LVince", "LKendyll", "LCarol"]
     random.shuffle(location)
-    print(location)
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':3 }
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
 
     #call in print_intro
     print_intro()
@@ -43,25 +48,21 @@ def main():
     print()
     userstate['username'] = str(input("   Gamer, what is your name? "))
     print()
-    #print(userstate['username'])
     
 
     #for loop to iterate through each location
     for loc in location:
         if loc == "LRachel":
-            print("call main function of your program here Rachel")
-            userstate = Rachel.main(userstate)
+            #userstate = Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
         elif loc == "LKendyll":
-            print("call main function of your program here Kendyll")
             kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
             userstate['points'] = kendylltuple[0]
             userstate['lives'] = kendylltuple[1]
             if userstate['lives'] == 0:
                 break
         elif loc == "LCarol":
-            print("call main function of your program here Carol")
             #test
             # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
             # print(vincetuple2)
@@ -70,48 +71,31 @@ def main():
             if userstate['lives'] == 0:
                 break
         else:
-            print("call main function of your program here Vince")
             vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
             print(vincetuple)
-            userstate['points'] = vincetuple[0]
-            userstate['lives'] = vincetuple[1]
+            userstate['points'] = vincetuple[0] #updates the current number of purrpoint
+            userstate['lives'] = vincetuple[1] #update the current number of lives
             if userstate['lives'] == 0:
                 break
 
-    #TODO add function to end game with if user has gone through all four locations and still has lives, then end game and print out .txt file with results
-    #add game ending
-
-    #Will be fixed to look better
     if userstate['lives'] == 0:
         print()
         print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
         print ("Here is you game summary: ")
-        print ("Cats Adopted")
-        print (userstate["cats_collected"])
-        print ("PurrPoints")
-        print (userstate["points"])
+        print ("    You were able to adopt these cat:")
+        print ("        " + str(userstate["cats_collected"]))
+        print ("    The amount PurrPoints collected is " + str(userstate["points"]))
     else:
         print()
         print ("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMEOW!!!!!!")
         print ("Congratulations for Finishing the the game!")
         print ("Here is you game summary: ")
-        print ("Cats Adopted")
-        print (userstate["cats_collected"])
-        print ("PurrPoints")
-        print (userstate["points"])
-        print ("Lives Left")
-        print (userstate["lives"])
+        print ("    You were able to adopt these cat:")
+        print ("        " + str(userstate["cats_collected"]))
+        print ("    The amount PurrPoints collected is " + str(userstate["points"]))
+        print ("    Lives Left: " + str(userstate["lives"]))
 
 
 
 if __name__=='__main__':  #calling defined function 'main'
     main()
-
-
-
-    #ignore.
-    #possibly extra code: 
-    #call in CSV
-#open file catdata.csv for reading
-# with open('catdata.csv') as catdata:
-#     for cat in catdata:

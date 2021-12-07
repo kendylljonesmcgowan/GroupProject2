@@ -50,7 +50,7 @@ def main():
     for loc in location:
         if loc == "LRachel":
             print("call main function of your program here Rachel")
-            #Rachel.main(userstate)
+            userstate = Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
         elif loc == "LKendyll":

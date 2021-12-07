@@ -137,29 +137,29 @@ def main(userstate):
         for x in range(0,5):
             choice = get_choice()
             points = do_action(choice, catdictionary, points)
-            if points == 5:
+        if points == 5:
+            cats_collected.append(catdictionary['name'])
+            print("I'd love to come home with you!!")
+        elif points == 4:
+            chance = random.randint(1,10)
+            if chance <= 2:
+                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+            else:
                 cats_collected.append(catdictionary['name'])
                 print("I'd love to come home with you!!")
-            elif points == 4:
-                chance = random.randint(1,10)
-                if chance <= 2:
-                    print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-                else:
-                    cats_collected.append(catdictionary['name'])
-                    print("I'd love to come home with you!!")
-            elif points == 3:
-                chance = random.randint(1,10)
-                if chance <= 4:
-                    print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-                else:
-                    cats_collected.append(catdictionary['name'])
-                    print("I'd love to come home with you!!")
-            elif points <= 2:
-                print("I'd rather stay here. Bye!")
-                print()
-                print("Displeasing the cat has cost you a life!")
-                lives -= 1
-                print("You now have " + str(lives) + " lives left."  )
+        elif points == 3:
+            chance = random.randint(1,10)
+            if chance <= 4:
+                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+            else:
+                cats_collected.append(catdictionary['name'])
+                print("I'd love to come home with you!!")
+        elif points <= 2:
+            print("I'd rather stay here. Bye!")
+            print()
+            print("Displeasing the cat has cost you a life!")
+            lives -= 1
+            print("You now have " + str(lives) + " lives left."  )
         if lives <= 0:
             break
 

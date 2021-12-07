@@ -55,7 +55,7 @@ def happy_tails_cats():
         'breed': "Short-Hair",
         'personality': 'independent',
         'age': 'adult',
-        'intro': "Artemis",
+        'intro': "Hewwo, my name is Artemis. ",
         'actions': [
             {'actionName': 'othercats', 'likes': False},
             {'actionName': 'brushing', 'likes': True },
@@ -131,7 +131,7 @@ def main(userstate):
     print('>^.^<')
     print("Hello " + username)
     welcome_message()
-
+    import random
     for catdictionary in htrcatlist():
         introduce_cat(catdictionary)
         for x in range(0,5):

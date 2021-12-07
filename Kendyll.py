@@ -365,12 +365,13 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(userstate):
+def main():
         import random
         # purrpoints = fpurrpoints
         # lives = flives
         # adoptedcatlist
         # name
+        userstate = {'points':0, 'cats_collected':[], 'username':' ' }
         name = userstate['username']
         purrpoints = userstate['points']
         adoptedcatlist = userstate['cats_collected']
@@ -617,6 +618,6 @@ def main(userstate):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main('userstate')
+        main()
         #(username, points, cats_collected)
         

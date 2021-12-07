@@ -614,6 +614,6 @@ def main(purrpoints,adoptedcatlist,name,lives):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main()
+        main('purrpoints', 'adoptedcatlist', 'name', 'lives')
         #(username, points, cats_collected)
         

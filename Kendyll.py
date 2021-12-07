@@ -400,6 +400,7 @@ def main(mainpoints,maincatlist,username,livesleft):
         print()
         for cats in loc2catlist:
                 if cats == "yams":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Yams! I am an orange Short-Hair kitten with lots of energy. Lets go on an adventure outside and get lost! It is so much fun to sneak out of the house. I love pets, other cats, playing and yummy treats...")
                         yamsinput = userinput()
                         print(yamsinput)
@@ -448,6 +449,7 @@ def main(mainpoints,maincatlist,username,livesleft):
 
 
                 elif cats == "leaf":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Leaf! I am a black Short-Hair adult cat and I like to act aloof. I am happiest when napping in the corner while you read on a cozy winter day. I don't like other cats, but I love brushing and yummy treats...")
                         leafinput = userinput()
                         print(leafinput)
@@ -496,6 +498,7 @@ def main(mainpoints,maincatlist,username,livesleft):
 
 
                 elif cats == "fox":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Fox! I am an orange-white Short-Hair adult cat that's full of curosity. I like to stare out the window and watch birds all day. I love pets, other cats, playng and yummy treats...")
                         foxinput = userinput()
                         print(foxinput)
@@ -549,6 +552,7 @@ def main(mainpoints,maincatlist,username,livesleft):
 
 
                 else:
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Dana! I am a calico Short-Hair adult cat that is very independent. My perfect day includes napping while the sun is up and running around the house late at night. I don't like other cats, but I love brushing...")
                         danainput = userinput()
                         print(danainput)

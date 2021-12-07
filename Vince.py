@@ -1,7 +1,11 @@
 # PSP Assignment 3
 # Location: AllPaws Cat Shelter
-# Last modified: December 5, 2021
+# Last modified: December 7, 2021
+# Created by Vince Ruel Alonte
+# The inputs for this location is STRICLY Y or N only. Inputing other characters or numbers results in a wrong choice.
+# PurrPoints, Lives, CatList, Username will be grabed from the Master Python File and used as running variables this location
 
+#A Function that will create a list from the users input on what actions they prefer.
 def userinput():
     print()
     ibrush = str(input("    Brush Me (Y/N): "))
@@ -12,39 +16,51 @@ def userinput():
     inputlist = [ibrush,ipet,iother,iplay,itreat]
     return inputlist
 
+# A function that calculate the amount of points by comparing the users list to the correct list
+# Each correct comparison equals a point
+# Only for Loki
 def lokipoints(illist):
-    lokicombination = ("Y", "Y", "Y", "Y", "N")
+    lokicombination = ("Y", "Y", "Y", "Y", "N") # Correct Combination of Inputs for Loki
     lokipoints = 0
     for trait in range(5):
         if lokicombination[trait] == illist[trait].upper():
             lokipoints += 1
     return lokipoints
 
+# A function that calculate the amount of points by comparing the users list to the correct list
+# Each correct comparison equals a point
+# Only for Boo
 def boopoints(iblist):
-    boocombination = ("Y", "Y", "Y", "Y", "Y")
+    boocombination = ("Y", "Y", "Y", "Y", "Y") # Correct Combination of Inputs for Boo
     boopoints = 0
     for trait in range(5):
         if boocombination[trait] == iblist[trait].upper():
             boopoints += 1
     return boopoints
 
+# A function that calculate the amount of points by comparing the users list to the correct list
+# Each correct comparison equals a point
+# Only for Wanda
 def wandapoints(iwlist):
-    wandacombination = ("N", "Y", "Y", "N", "N")
+    wandacombination = ("N", "Y", "Y", "N", "N") # Correct Combination of Inputs for Wanda
     wandapoints = 0
     for trait in range(5):
         if wandacombination[trait] == iwlist[trait].upper():
             wandapoints += 1
     return wandapoints
 
+# A function that calculate the amount of points by comparing the users list to the correct list
+# Each correct comparison equals a point
+# Only for Tobi
 def tobipoints(itlist):
-    tobicombination = ("N", "Y", "Y", "Y", "Y")
+    tobicombination = ("N", "Y", "Y", "Y", "Y") # Correct Combination of Inputs for Tobi
     tobipoints = 0
     for trait in range(5):
         if tobicombination[trait] == itlist[trait].upper():
             tobipoints += 1
     return tobipoints
 
-#Not yet sure if this is useful might delete later
+# A function that would translate the amount points it A generic output.
 def pointstranslate(points):
     response = "This Should be Overwritten"
     if points == 5:
@@ -57,7 +73,11 @@ def pointstranslate(points):
         response = "I don't wanna go with you! We are just too different!"
     return response
 
-
+# A function that would calculate the probabilty to adopt the cat.
+# If the user has collected 4 purrpoints for the current cat, the probability of adoption is 80%
+# If the user has collected 3 purrpoints for the current cat, the probability of apoption is 60%
+# 5 purrpoints is automatic adoption
+# 0,1,2 purrpoints is No adpotion
 def adoptcat(points):
     import random
     adopt = 99999 # should be over written to 0 or 1. Zero NO ADOPT. One ADOPT
@@ -80,6 +100,7 @@ def adoptcat(points):
     return adopt
 
 
+#This is the function will use the Master userstate dictionary to check the current lives, name, purrpoints and catlist
 def main(fpurrpoints,adoptedcatlist,name,flives):
     import random
     purrpoints = fpurrpoints
@@ -100,11 +121,21 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
     print()
 
 
-
+#Cats available for this location
+#I will get randomized so the cats are not served in order
     loc4catlist = ["loki", "boo", "wanda", "tobi"]
     random.shuffle(loc4catlist)
-    print(loc4catlist) # DELETE Later
 
+#For the shuffled list each cat will be called.
+#An intro text will be given for the user to read.
+#From there the person will choose the actions that will please the cat.
+#the first function that is called is the userinput function
+#the next is the "catname"point function to calculate the amount of purrpoints earned
+#the amount of purrpoints is added to the total purrpoints
+#next the pointtranslate file is called to print a generic statement
+#finally the chance to adpot the cat is calculated
+#a value of 1 means the cat will be adopted (Appended to the List)
+#while a value of 0 means that the user recieve a -1 from their life and not adopted
     print()
     for cats in loc4catlist:
         if cats == "loki":
@@ -113,12 +144,12 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             lokiinput = userinput()
             print()
             print("The number of PurrPoints you got from Loki is: ", lokipoints(lokiinput))
-            purrpoints += lokipoints(lokiinput) #change to to use the master  
+            purrpoints += lokipoints(lokiinput) 
             print()
             print(pointstranslate(lokipoints(lokiinput)))
             lokiadopt = adoptcat(lokipoints(lokiinput))
             if lokiadopt == 1:
-                adoptedcatlist.append(cats) #change to to use the master
+                adoptedcatlist.append(cats) 
                 print("Loki, has chosen to be Adopted and Become Friends FURever")
             elif lokiadopt == 0:
                 print(
@@ -137,7 +168,7 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
                    (_(
                 """)
                 print("Sorry have lost a life")
-                lives -= 1#change to to use the master
+                lives -= 1
                 if lives == 0:
                     break
             print()
@@ -150,12 +181,12 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             booinput = userinput()
             print()
             print("The number of PurrPoints you got from Boo is: ", boopoints(booinput))
-            purrpoints += boopoints(booinput) #change to to use the master  
+            purrpoints += boopoints(booinput)  
             print()
             print(pointstranslate(boopoints(booinput)))
             booadopt = adoptcat(boopoints(booinput))
             if booadopt == 1:
-                adoptedcatlist.append(cats) #change to to use the master
+                adoptedcatlist.append(cats) 
                 print("BOO, has chosen to be Adopted and Become Friends FURever")
             elif booadopt == 0:
                 print(
@@ -173,7 +204,7 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
                     ) )
                    (_(
                 """)
-                lives -= 1#change to to use the master
+                lives -= 1
                 if lives == 0:
                     break
             print()
@@ -186,12 +217,12 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             wandainput = userinput()
             print()
             print("The number of PurrPoints you got from Wanda is: ", wandapoints(wandainput))
-            purrpoints += wandapoints(wandainput) #change to to use the master 
+            purrpoints += wandapoints(wandainput)
             print()
             print(pointstranslate(wandapoints(wandainput)))
             wandaadopt = adoptcat(wandapoints(wandainput))
             if wandaadopt == 1:
-                adoptedcatlist.append(cats) #change to to use the master   
+                adoptedcatlist.append(cats)  
                 print("WANDA, has chosen to be Adopted and Become Friends FURever")
             elif wandaadopt == 0:
                 print(
@@ -209,7 +240,7 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
                     ) )
                    (_(
                 """)
-                lives -= 1#change to to use the master
+                lives -= 1
                 if lives == 0:
                     break
             print()
@@ -222,12 +253,12 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
             tobiinput = userinput()
             print()
             print("The number of PurrPoints you got from Tobi is: ", tobipoints(tobiinput))
-            purrpoints += tobipoints(tobiinput) #change to to use the master  
+            purrpoints += tobipoints(tobiinput)
             print()
             print(pointstranslate(tobipoints(tobiinput)))
             tobiadopt = adoptcat(tobipoints(tobiinput))
             if tobiadopt == 1:
-                adoptedcatlist.append(cats) #change to to use the master  
+                adoptedcatlist.append(cats) 
                 print("TOBI, has chosen to be Adopted and Become Friends FURever")
             elif tobiadopt == 0:
                 print(
@@ -245,22 +276,20 @@ def main(fpurrpoints,adoptedcatlist,name,flives):
                     ) )
                    (_(
                 """)
-                lives -= 1 #change to to use the master
+                lives -= 1
                 if lives == 0:
                     break
             print()
     return (purrpoints,lives)
+    #the main function returns a tuple that will be used to update the dictionaty with the current purrpoints and lives
 
 
-# if __name__=='__main__':  #calling defined function 'main'
+if __name__=='__main__':
 
+    userstate = {'points':0, 'cats_collected':[], 'username':'Pecus', 'lives':1 }
+    main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
 
-#     userstate = {'points':0, 'cats_collected':[], 'username':'Pecus', 'lives':1 }
-
-#     main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-
-#     if userstate['lives']:
-#         print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
-#         print ("Here is you game summary: ")
-#         print (userstate)
-
+    # if userstate['lives']==0:
+    #     print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
+    #     print ("Here is you game summary: ")
+    #     print (userstate)

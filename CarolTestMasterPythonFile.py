@@ -77,9 +77,7 @@ def main():
             # userstate['lives'] = vincetuple[1]
             if userstate['lives'] == 0:
                 break
-
-    #TODO add function to end game with if user has gone through all four locations and still has lives, then end game and print out .txt file with results
-    #add game ending
+        # return userstate values??????? 
 
     #Will be fixed to look better
     if userstate['lives'] == 0:

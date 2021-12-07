@@ -11,7 +11,7 @@ import random
 import Rachel
 import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
 import Kendyll
-# import Carol
+import Carol
 
 # Display program purpose
 #defining print_intro as a funtion

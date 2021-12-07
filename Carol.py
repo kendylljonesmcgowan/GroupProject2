@@ -27,6 +27,7 @@ def happy_tails_cats():
         'age': 'kitten',
         'intro': "Meeeeeeow! I'm Buster, and I'm the meowst annoying kitten you'll ever meet!! You wanna play?! Let's play all day!!",
         'actions': [
+            {'actionName': 'othercats', 'likes': True},
             {'actionName': 'brushing', 'likes': True },
             {'actionName': 'pets', 'likes': True},
             {'actionName': 'playing', 'likes': True},
@@ -41,6 +42,7 @@ def happy_tails_cats():
         'age': 'senior',
         'intro': "Greetings, human. My mature aloof nature sets me apart from the other cats here. ... oh, my name? Ophelia.",
         'actions': [
+            {'actionName': 'othercats', 'likes': False},
             {'actionName': 'brushing', 'likes': False },
             {'actionName': 'pets', 'likes': False},
             {'actionName': 'playing', 'likes': False},
@@ -55,6 +57,7 @@ def happy_tails_cats():
         'age': 'adult',
         'intro': "Artemis",
         'actions': [
+            {'actionName': 'othercats', 'likes': False},
             {'actionName': 'brushing', 'likes': True },
             {'actionName': 'pets', 'likes': True},
             {'actionName': 'playing', 'likes': False},
@@ -69,6 +72,7 @@ def happy_tails_cats():
         'age': 'kitten',
         'intro': "Hiya, my name is Gary and I'm a dopey kitteh. I'd love to just flop down and nap in your lap for hours!",
         'actions': [
+            {'actionName': 'othercats', 'likes': True},
             {'actionName': 'brushing', 'likes': False },
             {'actionName': 'pets', 'likes': True},
             {'actionName': 'playing', 'likes': True},
@@ -102,7 +106,7 @@ def introduce_cat(cat):
     print("   >^.^<   ")
 
 def get_choice():
-    print("Choose how you want to interact with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
+    print("Choose which interaction you like to do with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
     useraction = int(input("What would you like to do? Type the number for the action."))
     return useraction
 
@@ -140,7 +144,7 @@ def main():
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'userlives':9 }
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9 }
 
     #call in print_intro
     print_intro()
@@ -154,21 +158,20 @@ def main(userstate):
     username = userstate['username']
     points = userstate['points']
     cats_collected = userstate['cats_collected']
-    print('=^..^=')
+    lives = userstate['lives']
+    print('>^.^<')
     print("Hello " + username)
     welcome_message()
 
-    
-
     for catdictionary in htrcatlist():
         introduce_cat(catdictionary)
-        for x in range(1,5):
+        for x in range(0,5):
             choice = get_choice()
-            points_collected = do_action(choice, catdictionary, points)
-        if points_collected == 5:
+            points = do_action(choice, catdictionary, points)
+        if points == 5:
             cats_collected.append(catdictionary['name'])
             print("I'd love to come home with you!!")
-        elif points_collected == 4:
+        elif points == 4:
             chance = random.randint(1,10)
             if chance <= 2:
                 print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
@@ -182,46 +185,37 @@ def main(userstate):
             else:
                 cats_collected.append(catdictionary['name'])
                 print("I'd love to come home with you!!")
-        elif points_collected == 3:
-            chance = random.randint(1,10)
-            if chance <= 6:
-                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-            else:
-                cats_collected.append(catdictionary['name'])
-                print("I'd love to come home with you!!")
-        elif points_collected < 3:
-            print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+        elif points <= 2:
+            print("I'd rather stay here. Bye!")
             print()
             print("Displeasing the cat has cost you a life!")
-            userlives -= 1
-            if userlives == 0:
-                break
-            print("You now have " + str(userlives) + " lives left."  )
+            lives -= 1
+            print("You now have " + str(lives) + " lives left."  )
+        if lives <= 0:
+            break
 
-            #compare points before and after.  if user gained 3 points, cat is added to cats_collected
-            #                                   anything other than ^, cat is not added to cats_collected
-
-            print("Congratulations, you have " + str(points) + " points.")
-            print()
-            print()
-    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'userlives': userlives}
+        print("Congratulations, you have " + str(points) + " points.")
+        print()
+        print()
+    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
 
 
 #if lives is <= 0 then GAME OVER MAN
-def main(end_statements):
-  if userlives <= 0:
-    print("You've run out of lives!")
-    print("GAME OVER")
-    print("You adopted the following cats:"+ adopted_cats + "!")
-    print("Purr points collected:" + purr_points)
-  else:
-    print("You adopted the following cats:"+ adopted_cats + "!")
-    print("Purr points collected:" + purr_points + ";  Lives remaining:" + userlives)
+# def main(end_statements, userstate):
+#   lives = int(userstate['lives'])
+#   if lives <= 0:
+#     print("You've run out of lives!")
+#     print("GAME OVER")
+#     print("You adopted the following cats:"+ userstate['cats_collected'] + "!")
+#     print("Purr points collected:" + userstate['purr_points'])
+#   else:
+#     print("You adopted the following cats:"+ userstate['cats_collected'] + "!")
+#     print("Purr points collected:" + userstate['purr_points'] + ";  Lives remaining:" + userstate['lives'])
 
 # DON'T DELETE THIS?
-if __name__=='__main__':  #calling defined function 'main
-    username = input("What is your name?")
-    main(username)
+# if __name__ == '__main__':
+#     main({'points':0, 'cats_collected':[], 'username':' ', 'lives':9})
+#     #(username, points, cats_collected, lives)
 
 # print("""
 #          *                  *

@@ -65,8 +65,9 @@ def main():
             # test
             caroltuple = Carol.main(userstate)
             print(caroltuple)
-            # userstate['points'] = caroltuple[0]
-            # userstate['lives'] = caroltuple[1]
+            # had to change keys to points/lives vs 0/1 as in default program layout
+            userstate['points'] = caroltuple['points']
+            userstate['lives'] = caroltuple['lives']
             if userstate['lives'] == 0:
                 break
         else:

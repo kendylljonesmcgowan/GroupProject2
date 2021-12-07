@@ -162,10 +162,9 @@ def main(userstate):
             print("You now have " + str(lives) + " lives left."  )
         if lives <= 0:
             break
-
-        print("Congratulations, you have " + str(points) + " points.")
         print()
         print()
+    print("Congratulations, you have " + str(points) + " points.")
     return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
 
 # from master file
@@ -212,8 +211,9 @@ def main(userstate):
 #     print("Purr points collected:" + userstate['purr_points'] + ";  Lives remaining:" + userstate['lives'])
 
 # DON'T DELETE THIS?
-# if __name__ == '__main__':
-#     main({'points':0, 'cats_collected':[], 'username':' ', 'lives':9})
+if __name__ == '__main__':
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9}
+    main(userstate['points'], userstate['cats_collected'], userstate['username'], userstate['lives'])
 #     #(username, points, cats_collected, lives)
 
 # print("""

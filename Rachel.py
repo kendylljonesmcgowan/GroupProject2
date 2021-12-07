@@ -130,6 +130,7 @@ def main(userstate):
     username = userstate['username']
     points = userstate['points']
     cats_collected = userstate['cats_collected']
+    userlives = userstate['userlives']
     print('=^..^=')
     print("Hello " + username)
     print_welcome_message()
@@ -140,14 +141,29 @@ def main(userstate):
         introduce_cat(catdictionary)
         for x in range(1,5):
             choice = get_choice()
-            points = do_action(choice, catdictionary, points)
+            points_collected = do_action(choice, catdictionary, points)
+        if points_collected >= 3:
+            cats_collected.append(catdictionary['name'])
+            print("Congratulations! I'm going to be your new roommate.")
+        elif points_collected < 3:
+            print("The cat says, 'No thank you!'. Try another cat")
+            print()
+            print("Displeasing the cat has cost you a life!")
+            
+            #print()  INSERT CATMOJI HERE
+            userlives -= 1
+            if userlives == 0:
+                break
+            print("You now have " + str(userlives) + " lives left before you die."  )
+            print('=^x.x^=     ','=^x.x^=     ','=^x.x^=     ' )
+
             #compare points before and after.  if user gained 3 points, cat is added to cats_collected
             #                                   anything other than ^, cat is not added to cats_collected
 
             print("Congratulations, you have " + str(points) + " points.")
             print()
             print()
-    return {'points': points, 'cats_collected': cats_collected, 'username': username}
+    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'userlives': userlives}
 
 ##################### Output message from four cats at Gary's Cat Cafe ##############################
 
@@ -157,13 +173,9 @@ def main(userstate):
 
 ############## End of calculations, Start of output #################
 
-###output .txt of user score and names of cats adopted.
 
-#so i can run this file alone: delete for actual use. 
+
+#Enables running this file separately from the rest of the game (testing purposes)
 if __name__ == '__main__':
-    main({'points':0, 'cats_collected':[], 'username':'TESTPERSON'})
-    #(username, points, cats_collected)
-
-# if __name__=='__main__':  #calling defined function 'main
-#     username = input("What is your name?")
-#     main(username, 0)
+    main({'points':0, 'cats_collected':[], 'username':' ', 'userlives':9})
+    #(username, points, cats_collected, userlives)

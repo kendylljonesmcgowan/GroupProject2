@@ -9,9 +9,9 @@ import math
 import random
 
 import Rachel
-# import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
-# import Kendyll
-# import Carol
+import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
+import Kendyll
+import Carol
 
 # Display program purpose
 #defining print_intro as a funtion
@@ -50,11 +50,11 @@ def main():
     #base point assignment
     #points = 0
 
-    #TODO create lives key and value for dic below 
+   
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ' }
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'userlives':9}
 
     #collected cats array below
     #cats_collected = []
@@ -65,7 +65,7 @@ def main():
     userstate['username'] = username
     
     #Delete Rachel. for running the game.
-    userstate = Rachel.main(userstate)
+    #userstate = Rachel.main(userstate)
 
     #for loop to iterate through each location
     #uncomment to run game.
@@ -75,8 +75,8 @@ def main():
 
     #NOTE use this code for running the game through all four locations
     #NOTE when using this, delete --> userstate = Rachel.main(userstate)
-    # for location in locations():
-    #    userstate = location.main(userstate)
+    for location in locations():
+       userstate = location.main(userstate)
 
 
 if __name__=='__main__':  #calling defined function 'main'

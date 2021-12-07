@@ -154,6 +154,7 @@ def main(userstate):
     username = userstate['username']
     points = userstate['points']
     cats_collected = userstate['cats_collected']
+    userlives = userstate['userlives']
     print('>^.^<')
     print("Hello " + username)
     welcome_message()

@@ -1,11 +1,14 @@
 ## Kendyll's Location Code ##
-## Kitten City Rescue: Yams, Leaf, Fox and Dana ##
+## Kitten City Rescue: Yams, Leaf, Fox, Dana ##
 ## Followed Vince's code ##
 ## Changed Vince's Location and Cat contents ##
 ## Changed: game print statements (location intro, ascii cats, positive/negative reaction from cat)
 ## Changed: variable and function names (cat names, cat points, cat input, cat lists, cat lives, cat trait combination)
 ## Karen Whillans, GEOM67, Fall 2021 ##
+## Assignment 2, Implementation ##
 ## Kendyll Jones-McGowan, Section 61 ##
+
+## define user action inputs ##
 
 def userinput():
         print()
@@ -16,6 +19,8 @@ def userinput():
         itreat = str(input(" Would you like to give me a treat? (Y/N): "))
         inputlist = [ibrush,ipet,iother,iplay,itreat]
         return inputlist
+
+## define cat traits and purrpoints ##
 
 def yamspoints(iylist):
         yamscombination = ("N","Y","Y","Y","Y")
@@ -49,6 +54,8 @@ def danapoints(idlist):
                         danapoints += 1
         return danapoints
 
+## purrpoint print statements ##
+
 def pointstranslate(points):
         response = "should be overwritten"
         if points == 5:
@@ -60,6 +67,8 @@ def pointstranslate(points):
         else:
                 response = "I don't want to go home with you. HISS!"
         return response
+
+## adoption chance based on purrpoints ##
 
 def adoptcat(points):
         import random
@@ -82,6 +91,8 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
+## refers to main function in Master ##
+
 def main(mainpoints,maincatlist,username,livesleft):
         import random
         #userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
@@ -90,7 +101,8 @@ def main(mainpoints,maincatlist,username,livesleft):
         adoptedcatlist = maincatlist
         lives = livesleft
 
-        # Introduction to the Location
+## Introduction to the Location ##
+
         print()
         print("***************************************************************************************************************************************")
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
@@ -110,8 +122,12 @@ def main(mainpoints,maincatlist,username,livesleft):
         print("***************************************************************************************************************************************")        
         print()
 
+## list cats at Kitten City Rescue location, randomly shuffle them ##
+
         loc2catlist = ["yams", "leaf", "fox", "dana"]
         random.shuffle(loc2catlist)
+
+## begin Kitten City Rescue cat interaction gameplay ##
 
         print()
         for cats in loc2catlist:
@@ -338,8 +354,10 @@ def main(mainpoints,maincatlist,username,livesleft):
 #        `*-*   `*-*  `*-*'
 #         Please, come again soon! Meow!""")
 
+## refers to main function in Master ##
+
 if __name__ == '__main__':
         userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
         main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-        #(username, points, cats_collected)
-        
+
+#(username, points, cats_collected)

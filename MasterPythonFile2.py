@@ -37,7 +37,7 @@ def get_name():
 
 
 
-
+ 
 #defines a function with an array containing the four different location files
 #random.shuffle returns the list in a random order
 def locations():

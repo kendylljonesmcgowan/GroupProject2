@@ -365,13 +365,9 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main():
+def main(purrpoints,adoptedcatlist,name,lives):
         import random
-        # purrpoints = fpurrpoints
-        # lives = flives
-        # adoptedcatlist
-        # name
-        userstate = {'points':0, 'cats_collected':[], 'username':' ' }
+        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'userlives': '' }
         name = userstate['username']
         purrpoints = userstate['points']
         adoptedcatlist = userstate['cats_collected']

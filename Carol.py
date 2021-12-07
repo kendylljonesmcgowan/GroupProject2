@@ -106,7 +106,7 @@ def introduce_cat(cat):
     print("   >^.^<   ")
 
 def get_choice():
-    print("Choose how you want to interact with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
+    print("Choose which interaction you like to do with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
     useraction = int(input("What would you like to do? Type the number for the action."))
     return useraction
 
@@ -190,12 +190,9 @@ def main(userstate):
             print()
             print("Displeasing the cat has cost you a life!")
             lives -= 1
-        if lives == 0:
+            print("You now have " + str(lives) + " lives left."  )
+        if lives <= 0:
             break
-        print("You now have " + str(lives) + " lives left."  )
-
-            #compare points before and after.  if user gained 3 points, cat is added to cats_collected
-            #                                   anything other than ^, cat is not added to cats_collected
 
         print("Congratulations, you have " + str(points) + " points.")
         print()

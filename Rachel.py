@@ -48,7 +48,7 @@ def gary_cats():
                     {'actionName': 'pets', 'likes': False},
                     {'actionName': 'othercats', 'likes': True},
                     {'actionName': 'playing', 'likes': True},
-                    {'actionName': 'treas', 'likes': True},
+                    {'actionName': 'treats', 'likes': True},
                 ]
             },
             {

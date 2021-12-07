@@ -341,7 +341,7 @@ def pointstranslate(points):
         elif points == 3:
                 response = "I'm still deciding... But If I go with you, you have to be a better Owner! Meow!"
         else:
-                response = "Meow, I don't think this is going to work out... I don't want to go home with you."
+                response = "I don't want to go home with you. HISS!"
         return response
 
 def adoptcat(points):
@@ -365,16 +365,13 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(userstate):
+def main(purrpoints,adoptedcatlist,name,lives):
         import random
-        # purrpoints = fpurrpoints
-        # lives = flives
-        # adoptedcatlist
-        # name
+        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
         name = userstate['username']
         purrpoints = userstate['points']
         adoptedcatlist = userstate['cats_collected']
-        lives = userstate['userlives']
+        lives = userstate['lives']
 
         # Introduction to the Location
         print()
@@ -382,12 +379,12 @@ def main(userstate):
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + name + "... and stay as long as you would like!")
         print()
-        print("Here you'll have the posibility to meet 4 new different Cats")
+        print("Here you'll get to meet 4 new Cats! Try to adopt them all by choosing the right interactions to befriend them")
         print()
         print("NOTE: Each location has it's own quirk!")
         print()
         #print("Kitten City Rescue still gives you PurrPoints even if the cat does not want to be adopted") #Ask the team if this is okay. Easy fix
-        print("This Shelter always asks you 5 questions for each cat. Every correct answer earns you 1 PurrPoint!")
+        print("Here at Kitten City Rescue we always ask you 5 questions for each cat. Every correct answer earns you 1 PurrPoint!")
         print()
         print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
         print()
@@ -415,7 +412,7 @@ def main(userstate):
                                 adoptedcatlist.append(cats)
                                 print("""
                    _ |\_
-                   \` ..\
+                   \` ..|
               __,.-" =__Y=
             ."        )
       _    /   ,    \/\_
@@ -431,7 +428,7 @@ def main(userstate):
                /     \_  
                |  __==/
                /   (
-              ;     \
+              ;     |
              /      |
             /    ,  /
           .'      | |
@@ -441,7 +438,7 @@ def main(userstate):
          \  '-----' _.-` '._)
           `'-------'""")
                                 print()
-                                print("Sorry, you have lost a life")
+                                print("Sorry, I don't want you to adopt me and you have LOST 1 life")
                                 lives -= 1     #change
                                 if lives == 0:
                                         break
@@ -462,9 +459,9 @@ def main(userstate):
                         if leafadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""       
-   /\_/\
+   /\_/
    >^.^<.---.
-  _'-`-'     )\
+  _'-`-'     )|
  (6--\ |--\ (`.`-.
      --'  --'  ``-'""")
                                 print()
@@ -472,12 +469,12 @@ def main(userstate):
                         elif leafadopt == 0:
                                 print(
                         """Meow, I don't think this is going to work out...
-            /\
-            \ \
-             \ \
+            /|
+            \ |
+             \ |
              / /
             / /
-           _\ \_/\/\
+           _\ \_/\/|
           /  *  \@@ =
          |       |Y/
          |       |~
@@ -488,8 +485,8 @@ def main(userstate):
           ( / \ )
             """)
                                 print()
-                                print("Sorry, you have lost a life")
-                                lives -= 1#change to to use the master
+                                print("Sorry, I don't want you to adopt me and you have LOST 1 life")
+                                lives -= 1      #change to to use the master
                                 if lives == 0:
                                         break
                         print()
@@ -511,7 +508,7 @@ def main(userstate):
                                 print("""
                       ,
                     _/((
-           _.---. .'   `\
+           _.---. .'   `|
          .'      `     ^ T=
         /     \       .--'
        |      /       )'-.
@@ -529,9 +526,9 @@ def main(userstate):
             )     (
            =\     /=
              )===(
-            /     \
+            /     |
             |     |
-           /       \
+           /       |
            \       /
             \__  _/
               ( (
@@ -539,7 +536,7 @@ def main(userstate):
               (_(
             """)
                                 print()
-                                print("Sorry, you have lost a life")
+                                print("Sorry, I don't want you to adopt me and you have LOST 1 life")
                                 lives -= 1#change to to use the master
                                 if lives == 0:
                                         break
@@ -547,21 +544,21 @@ def main(userstate):
 
 
 
-        else:
-                print("Meow, my name is Dana! I am a calico Short-Hair adult cat that is very independent. My perfect day includes napping while the sun is up and running around the house late at night. I don't like other cats, but I love brushing...")
-                danainput = userinput()
-                print(danainput)
-                print()
-                print("The number of PurrPoints you got from Dana is: ", danapoints(danainput))
-                purrpoints += danapoints(danainput)     #change
-                print()
-                print(pointstranslate(danapoints(danainput)))
-                print()
-                danaadopt = adoptcat(danapoints(danainput))
-                if danaadopt == 1:
-                        adoptedcatlist.append(cats)
-                        print("""
-                 (\(\
+                else:
+                        print("Meow, my name is Dana! I am a calico Short-Hair adult cat that is very independent. My perfect day includes napping while the sun is up and running around the house late at night. I don't like other cats, but I love brushing...")
+                        danainput = userinput()
+                        print(danainput)
+                        print()
+                        print("The number of PurrPoints you got from Dana is: ", danapoints(danainput))
+                        purrpoints += danapoints(danainput)     #change
+                        print()
+                        print(pointstranslate(danapoints(danainput)))
+                        print()
+                        danaadopt = adoptcat(danapoints(danainput))
+                        if danaadopt == 1:
+                                adoptedcatlist.append(cats)
+                                print("""
+                 (\(|
                  / ..(
               .-' ,_Y/
             .'     (
@@ -569,11 +566,11 @@ def main(userstate):
           _|  _/| //
         .',_\__)\_))
         '----,)""")
-                        print()
-                        print()
-                        print("Meow! I am so excited to go home with you. Friends fuuurever! Let's go nap!") #make more puns
-                elif danaadopt == 0:
-                        print(
+                                print()
+                                print()
+                                print("Meow! I am so excited to go home with you. Friends fuuurever! Let's go nap!") #make more puns
+                        elif danaadopt == 0:
+                                print(
                 """Meow, I don't think this is going to work out...
                               / )
               (\__/)         ( (
@@ -583,17 +580,17 @@ def main(userstate):
              (              */
               \              |
              ,'\       ,    ,'
-             `-'\  ,---\   | \
+             `-'\  ,---\   | |
                 _) )    `. \ /
                (__/       ) ) 
                          (_/""")
-                        print()
-                        print("Sorry, you have lost a life")
-                        lives -= 1     #change to to use the master
-                        if lives == 0:
-                                #break
                                 print()
-        print("You have earned" + purrpoints + "points, and have" + lives + "lives left!")
+                                print("Sorry, I don't want you to adopt me and you have LOST 1 life")
+                                lives -= 1     #change to to use the master
+                        if lives == 0:
+                                break
+                        print()
+        print("You have earned " + str(purrpoints) + " points, and have " + str(lives) + " lives left!")
         return (purrpoints,lives)
 
 
@@ -617,6 +614,6 @@ def main(userstate):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main('userstate')
+        main('purrpoints', 'adoptedcatlist', 'name', 'lives')
         #(username, points, cats_collected)
         

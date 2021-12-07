@@ -11,7 +11,7 @@ import random
 import Rachel
 import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
 import Kendyll
-import Carol
+# import Carol
 
 # Display program purpose
 #defining print_intro as a funtion
@@ -23,60 +23,85 @@ def print_intro():
     print(' =^..^= ')
     print("Get ready to meet and adopt feline friends from four different cat rescues.")
     print("Each cat is looking for their furrever home, will you be the purrfect match?")
-    
-#function to get user to imput name
-def get_name():
-    return input("Gamer, what is your name? ")
 
-
-#call in CSV
-#open file catdata.csv for reading
-
-# with open('catdata.csv') as catdata:
-#     for cat in catdata:
-
-
-
-
-#defines a function with an array containing the four different location files
-#random.shuffle returns the list in a random order
-def locations():
-    location = [Rachel, Vince, Kendyll, Carol]
-    random.shuffle(location)
-    return location
 
 #defining the main program function
 def main():
-    #base point assignment
-    #points = 0
-
-   
+    #random.shuffle returns the list in a random order
+    location = ["LRachel", "LVince", "LKendyll", "LCarol"]
+    random.shuffle(location)
+    print(location)
 
     #user state to retain and hold accrued points and cats
     #dictionary to get passed around location files and hold the state of the game
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'userlives':9}
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':3 }
 
-    #collected cats array below
-    #cats_collected = []
     #call in print_intro
     print_intro()
+
     #get the user's name
-    username = get_name()
-    userstate['username'] = username
+    print()
+    userstate['username'] = str(input("   Gamer, what is your name? "))
+    print()
+    #print(userstate['username'])
     
-    #Delete Rachel. for running the game.
-    #userstate = Rachel.main(userstate)
 
     #for loop to iterate through each location
-    #uncomment to run game.
+    for loc in location:
+        if loc == "LRachel":
+            print("call main function of your program here Rachel")
+            #userstate = Rachel.main(userstate)
+            if userstate['lives'] == 0:
+                break
+        elif loc == "LKendyll":
+            print("call main function of your program here Kendyll")
+            kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
+            userstate['points'] = kendylltuple[0]
+            userstate['lives'] = kendylltuple[1]
+            if userstate['lives'] == 0:
+                break
+        elif loc == "LCarol":
+            print("call main function of your program here Carol")
+            #test
+            # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            # print(vincetuple2)
+            # userstate['points'] = vincetuple2[0]
+            # userstate['lives'] = vincetuple2[1]
+            if userstate['lives'] == 0:
+                break
+        else:
+            print("call main function of your program here Vince")
+            #vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            # print(vincetuple)
+            # userstate['points'] = vincetuple[0]
+            # userstate['lives'] = vincetuple[1]
+            if userstate['lives'] == 0:
+                break
 
     #TODO add function to end game with if user has gone through all four locations and still has lives, then end game and print out .txt file with results
-    #add game ending 
+    #add game ending
 
-    #NOTE use this code for running the game through all four locations
-    #NOTE when using this, delete --> userstate = Rachel.main(userstate)
-    for location in locations():
-       userstate = location.main(userstate)
+    #Will be fixed to look better
+    if userstate['lives'] == 0:
+        print()
+        print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
+        print ("Here is you game summary: ")
+        print ("Cats Adopted")
+        print (userstate["cats_collected"])
+        print ("PurrPoints")
+        print (userstate["points"])
+    else:
+        print()
+        print ("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMEOW!!!!!!")
+        print ("Congratulations for Finishing the the game!")
+        print ("Here is you game summary: ")
+        print ("Cats Adopted")
+        print (userstate["cats_collected"])
+        print ("PurrPoints")
+        print (userstate["points"])
+        print ("Lives Left")
+        print (userstate["lives"])
+
 
 
 if __name__=='__main__':  #calling defined function 'main'

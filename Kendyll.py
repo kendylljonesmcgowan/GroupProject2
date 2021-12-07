@@ -375,7 +375,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 
         # Introduction to the Location
         print()
-        print()
+        print("***************************************************************************************************************************************")
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + name + "... and stay as long as you would like!")
         print()
@@ -391,6 +391,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
         print(name + " currently you have " + str(lives) + " life points left")
         print()
         print("We hope you enjoy meeting our cats! Good luck!")
+        print("***************************************************************************************************************************************")        
         print()
 
         loc2catlist = ["yams", "leaf", "fox", "dana"]
@@ -479,7 +480,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
          |       |Y/
          |       |~
           \ /_\ /
-           \\ //
+           || //
             |||
            _|||_
           ( / \ )

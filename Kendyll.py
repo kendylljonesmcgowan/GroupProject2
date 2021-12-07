@@ -49,7 +49,6 @@ def danapoints(idlist):
                         danapoints += 1
         return danapoints
 
-#Not yet sure if this is useful might delete later
 def pointstranslate(points):
         response = "should be overwritten"
         if points == 5:
@@ -101,7 +100,6 @@ def main(mainpoints,maincatlist,username,livesleft):
         print()
         print("NOTE: Each location has it's own quirk!")
         print()
-        #print("Kitten City Rescue still gives you PurrPoints even if the cat does not want to be adopted") #Ask the team if this is okay. Easy fix
         print("Here at Kitten City Rescue we always ask you 5 questions for each cat. Every correct answer earns you 1 PurrPoint!")
         print()
         print("REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
@@ -124,7 +122,7 @@ def main(mainpoints,maincatlist,username,livesleft):
                         print(yamsinput)
                         print()
                         print("The number of PurrPoints you got from Yams is: ", yamspoints(yamsinput))
-                        purrpoints += yamspoints(yamsinput)     #change
+                        purrpoints += yamspoints(yamsinput)
                         print()
                         print(pointstranslate(yamspoints(yamsinput)))
                         yamsadopt = adoptcat(yamspoints(yamsinput))

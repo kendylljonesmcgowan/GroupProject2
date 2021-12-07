@@ -459,7 +459,8 @@ def main(mainpoints,maincatlist,username,livesleft):
                         leafadopt = adoptcat(leafpoints(leafinput))
                         if leafadopt == 1:
                                 adoptedcatlist.append(cats)
-                                print("""       
+                                print("""
+                                I have decided... please adopt me!       
    /\_/
    >^.^<.---.
   _'-`-'     )|
@@ -507,6 +508,7 @@ def main(mainpoints,maincatlist,username,livesleft):
                         if foxadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!   
                       ,
                     _/((
            _.---. .'   `|
@@ -559,6 +561,7 @@ def main(mainpoints,maincatlist,username,livesleft):
                         if danaadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!   
                  (\(|
                  / ..(
               .-' ,_Y/

@@ -110,9 +110,25 @@ if __name__ == '__main__':
 
 
 
-    #ignore.
-    #possibly extra code: 
-    #call in CSV
-#open file catdata.csv for reading
-# with open('catdata.csv') as catdata:
-#     for cat in catdata:
+print("""
+         *                  *
+             __                *
+          ,db'    *     *
+         ,d8/       *        *    *
+         888
+         `db\       *     *
+           `o`_                    **
+      *               *   *    _      *
+            *                 / )
+         *    (\__/) *       ( (  *
+       ,-.,-.,)    (.,-.,-.,-.) ).,-.,-.
+      | @|  ={      }= | @|  / / | @|o |
+     _j__j__j_)     `-------/ /__j__j__j_
+     ________(               /___________
+      |  | @| \              || o|O | @|
+      |o |  |,'\       ,   ,'"|  |  |  |  hjw
+     vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//v
+                _) )    `. \ /
+               (__/       ) )
+                         (_/
+""")

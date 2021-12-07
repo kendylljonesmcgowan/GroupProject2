@@ -123,6 +123,51 @@ def do_action(choice, cat, points):
         points -= 0
     return points
 
+def main(userstate):
+    username = userstate['username']
+    points = userstate['points']
+    cats_collected = userstate['cats_collected']
+    lives = userstate['lives']
+    print('>^.^<')
+    print("Hello " + username)
+    welcome_message()
+
+    for catdictionary in htrcatlist():
+        introduce_cat(catdictionary)
+        for x in range(0,5):
+            choice = get_choice()
+            points = do_action(choice, catdictionary, points)
+            if points == 5:
+                cats_collected.append(catdictionary['name'])
+                print("I'd love to come home with you!!")
+            elif points == 4:
+                chance = random.randint(1,10)
+                if chance <= 2:
+                    print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+                else:
+                    cats_collected.append(catdictionary['name'])
+                    print("I'd love to come home with you!!")
+            elif points == 3:
+                chance = random.randint(1,10)
+                if chance <= 4:
+                    print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+                else:
+                    cats_collected.append(catdictionary['name'])
+                    print("I'd love to come home with you!!")
+            elif points <= 2:
+                print("I'd rather stay here. Bye!")
+                print()
+                print("Displeasing the cat has cost you a life!")
+                lives -= 1
+                print("You now have " + str(lives) + " lives left."  )
+        if lives <= 0:
+            break
+
+        print("Congratulations, you have " + str(points) + " points.")
+        print()
+        print()
+    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
+
 # from master file
 #defining print_intro as a funtion
 # def print_intro():
@@ -153,52 +198,6 @@ def do_action(choice, cat, points):
 #     print()
 #     userstate['username'] = str(input("  Howdy there! What is your name? "))
 #     print()
-
-def main(userstate):
-    username = userstate['username']
-    points = userstate['points']
-    cats_collected = userstate['cats_collected']
-    lives = userstate['lives']
-    print('>^.^<')
-    print("Hello " + username)
-    welcome_message()
-
-    for catdictionary in htrcatlist():
-        introduce_cat(catdictionary)
-        for x in range(0,5):
-            choice = get_choice()
-            points = do_action(choice, catdictionary, points)
-        if points == 5:
-            cats_collected.append(catdictionary['name'])
-            print("I'd love to come home with you!!")
-        elif points == 4:
-            chance = random.randint(1,10)
-            if chance <= 2:
-                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-            else:
-                cats_collected.append(catdictionary['name'])
-                print("I'd love to come home with you!!")
-        elif points == 3:
-            chance = random.randint(1,10)
-            if chance <= 4:
-                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-            else:
-                cats_collected.append(catdictionary['name'])
-                print("I'd love to come home with you!!")
-        elif points <= 2:
-            print("I'd rather stay here. Bye!")
-            print()
-            print("Displeasing the cat has cost you a life!")
-            lives -= 1
-            print("You now have " + str(lives) + " lives left."  )
-        if lives <= 0:
-            break
-
-        print("Congratulations, you have " + str(points) + " points.")
-        print()
-        print()
-    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
-
 
 #if lives is <= 0 then GAME OVER MAN
 # def main(end_statements, userstate):

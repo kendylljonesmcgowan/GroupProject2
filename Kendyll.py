@@ -1,10 +1,11 @@
-# def main(userstate):
-#         username = userstate['username']
-#         points = userstate['points']
-#         cats_collected = userstate['cats_collected']
-#         print('=^..^=')
-#         print("Hello " + username)
-#         print_welcome_message()
+## Kendyll's Location Code ##
+## Kitten City Rescue: Yams, Leaf, Fox and Dana ##
+## Followed Vince's code ##
+## Changed Vince's Location and Cat contents ##
+## Changed: game print statements (location intro, ascii cats, positive/negative reaction from cat)
+## Changed: variable and function names (cat names, cat points, cat input, cat lists, cat lives, cat trait combination)
+## Karen Whillans, GEOM67, Fall 2021 ##
+## Kendyll Jones-McGowan, Section 61 ##
 
 def userinput():
         print()

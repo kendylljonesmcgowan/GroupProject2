@@ -335,7 +335,7 @@ def danapoints(idlist):
 def pointstranslate(points):
         response = "should be overwritten"
         if points == 5:
-                response = "CON-CAT-ULATIONS! We are going home together Pur-riend"
+                response = "CON-CAT-ULATIONS! We are going home together Fuuuriend"
         elif points == 4:
                 response = "Purrr... Give me a sec To think about it..."
         elif points == 3:
@@ -365,13 +365,13 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(purrpoints,adoptedcatlist,name,lives):
+def main(mainpoints,maincatlist,username,livesleft):
         import random
-        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
-        name = userstate['username']
-        purrpoints = userstate['points']
-        adoptedcatlist = userstate['cats_collected']
-        lives = userstate['lives']
+        #userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
+        name = username
+        purrpoints = mainpoints
+        adoptedcatlist = maincatlist
+        lives = livesleft
 
         # Introduction to the Location
         print()
@@ -615,6 +615,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main('purrpoints', 'adoptedcatlist', 'name', 'lives')
+        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
+        main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
         #(username, points, cats_collected)
         

@@ -10,7 +10,7 @@ import random
 
 import Rachel
 import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
-import KendyllCopy
+import Kendyll
 # import Carol
 
 # Display program purpose
@@ -55,7 +55,7 @@ def main():
                 break
         elif loc == "LKendyll":
             print("call main function of your program here Kendyll")
-            kendylltuple=(KendyllCopy.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
+            kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
             userstate['points'] = kendylltuple[0]
             userstate['lives'] = kendylltuple[1]
             if userstate['lives'] == 0:

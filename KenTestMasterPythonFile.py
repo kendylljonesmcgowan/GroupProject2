@@ -8,10 +8,9 @@
 import math
 import random
 
-#import Rachel
-#import Vince
-import Kendyll    #uncomment other group member names to run whole program.  commented out for testing. 
-# import Kendyll
+import Rachel
+import Vince    #uncomment other group member names to run whole program.  commented out for testing. 
+import Kendyll
 # import Carol
 
 # Display program purpose
@@ -45,18 +44,18 @@ def main():
     userstate['username'] = str(input("   Gamer, what is your name? "))
     print()
     #print(userstate['username'])
+    
 
     #for loop to iterate through each location
     for loc in location:
         if loc == "LRachel":
             print("call main function of your program here Rachel")
-            #Rachel.main(userstate)
+            #userstate = Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
         elif loc == "LKendyll":
             print("call main function of your program here Kendyll")
-            kendylltuple = Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            print(kendylltuple)
+            kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
             userstate['points'] = kendylltuple[0]
             userstate['lives'] = kendylltuple[1]
             if userstate['lives'] == 0:
@@ -64,10 +63,18 @@ def main():
         elif loc == "LCarol":
             print("call main function of your program here Carol")
             #test
+            # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            # print(vincetuple2)
+            # userstate['points'] = vincetuple2[0]
+            # userstate['lives'] = vincetuple2[1]
             if userstate['lives'] == 0:
                 break
         else:
             print("call main function of your program here Vince")
+            #vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+            # print(vincetuple)
+            # userstate['points'] = vincetuple[0]
+            # userstate['lives'] = vincetuple[1]
             if userstate['lives'] == 0:
                 break
 

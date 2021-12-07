@@ -621,4 +621,3 @@ if __name__ == '__main__':
         main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
         
         #(username, points, cats_collected)
-        

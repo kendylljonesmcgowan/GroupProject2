@@ -335,7 +335,7 @@ def danapoints(idlist):
 def pointstranslate(points):
         response = "should be overwritten"
         if points == 5:
-                response = "CON-CAT-ULATIONS! We are going home together Pur-riend"
+                response = "CON-CAT-ULATIONS! We are going home together Fuuuriend"
         elif points == 4:
                 response = "Purrr... Give me a sec To think about it..."
         elif points == 3:
@@ -365,17 +365,17 @@ def adoptcat(points):
                 adopt = 0
         return adopt
 
-def main(purrpoints,adoptedcatlist,name,lives):
+def main(mainpoints,maincatlist,username,livesleft):
         import random
-        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
-        name = userstate['username']
-        purrpoints = userstate['points']
-        adoptedcatlist = userstate['cats_collected']
-        lives = userstate['lives']
+        #userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
+        name = username
+        purrpoints = mainpoints
+        adoptedcatlist = maincatlist
+        lives = livesleft
 
         # Introduction to the Location
         print()
-        print()
+        print("***************************************************************************************************************************************")
         print("Meow-come to Kitten City Rescue! We have so many purrrfect cats here, and all of them can't wait to meet you!")
         print("We hope you have a blast getting to know each of our paw-some friends! Enjoy," + name + "... and stay as long as you would like!")
         print()
@@ -391,6 +391,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
         print(name + " currently you have " + str(lives) + " life points left")
         print()
         print("We hope you enjoy meeting our cats! Good luck!")
+        print("***************************************************************************************************************************************")        
         print()
 
         loc2catlist = ["yams", "leaf", "fox", "dana"]
@@ -399,6 +400,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
         print()
         for cats in loc2catlist:
                 if cats == "yams":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Yams! I am an orange Short-Hair kitten with lots of energy. Lets go on an adventure outside and get lost! It is so much fun to sneak out of the house. I love pets, other cats, playing and yummy treats...")
                         yamsinput = userinput()
                         print(yamsinput)
@@ -411,6 +413,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         if yamsadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!
                    _ |\_
                    \` ..|
               __,.-" =__Y=
@@ -446,6 +449,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 
 
                 elif cats == "leaf":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Leaf! I am a black Short-Hair adult cat and I like to act aloof. I am happiest when napping in the corner while you read on a cozy winter day. I don't like other cats, but I love brushing and yummy treats...")
                         leafinput = userinput()
                         print(leafinput)
@@ -458,7 +462,8 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         leafadopt = adoptcat(leafpoints(leafinput))
                         if leafadopt == 1:
                                 adoptedcatlist.append(cats)
-                                print("""       
+                                print("""
+                                I have decided... please adopt me!       
    /\_/
    >^.^<.---.
   _'-`-'     )|
@@ -479,7 +484,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
          |       |Y/
          |       |~
           \ /_\ /
-           \\ //
+           || //
             |||
            _|||_
           ( / \ )
@@ -493,6 +498,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 
 
                 elif cats == "fox":
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Fox! I am an orange-white Short-Hair adult cat that's full of curosity. I like to stare out the window and watch birds all day. I love pets, other cats, playng and yummy treats...")
                         foxinput = userinput()
                         print(foxinput)
@@ -506,6 +512,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         if foxadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!   
                       ,
                     _/((
            _.---. .'   `|
@@ -545,6 +552,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 
 
                 else:
+                        print("***************************************************************************************************************************************")
                         print("Meow, my name is Dana! I am a calico Short-Hair adult cat that is very independent. My perfect day includes napping while the sun is up and running around the house late at night. I don't like other cats, but I love brushing...")
                         danainput = userinput()
                         print(danainput)
@@ -558,6 +566,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         if danaadopt == 1:
                                 adoptedcatlist.append(cats)
                                 print("""
+                                I have decided... please adopt me!   
                  (\(|
                  / ..(
               .-' ,_Y/
@@ -614,6 +623,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
 #         Please, come again soon! Meow!""")
 
 if __name__ == '__main__':
-        main('purrpoints', 'adoptedcatlist', 'name', 'lives')
+        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
+        main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
         #(username, points, cats_collected)
         

@@ -6,6 +6,7 @@
 import random
 
 #list of dictionaries for cats at Gary's cat cafe
+#each cat dictionary has their attributes and subdictionary for action attributes
 def gary_cats():
     return [
             {
@@ -67,18 +68,19 @@ def gary_cats():
         ]
     
 
-
+#defining catlist function and assigning a variable to the dictionary.  Random shuffle selecting from the dictionary and returning a selection.
 def catlist():
     mycats = gary_cats()
     random.shuffle(mycats)
     return mycats
 
+#introductory message in a function that calls on dictionary keys for the cat selected above. 
 def introduce_cat(cat):
     print("Hi, friendly human, I'm " + cat['name'] + " and I'm a " + cat['color'] + ", " + cat['breed'] + " cat, who is very " + cat['personality'] + ". I am a " + cat['age'] + ".  Let's have fun!")  #####add int rest of cat intro statement calling from dictionary keys
     print()
     print("""ฅ^•ﻌ•^ฅ""")
 
-
+#function for user interaction input 
 def get_choice():
     print("Choose how you want to interact with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
     useraction = int(input("What would you like to do? Type the number for the action."))
@@ -122,9 +124,6 @@ def print_welcome_message():
  fL (,__....----'''       (,..--''
      """)
 
-#TODO
-#if lives is > 0 
-#lif lives is <= 0 then print("You lost! Good bye. GAME OVER.")
 
 def main(userstate):
     username = userstate['username']
@@ -149,20 +148,19 @@ def main(userstate):
             print("The cat says, 'No thank you!'. Try another cat")
             print()
             print("Displeasing the cat has cost you a life!")
+            print('=^x.x^=     ','=^x.x^=     ','=^x.x^=     ' )
             
-            #print()  INSERT CATMOJI HERE
+            #if statement about to determine if user loses a life and if lives are zero, ending the game.
             userlives -= 1
             if userlives == 0:
                 break
             print("You now have " + str(userlives) + " lives left before you die."  )
             print('=^x.x^=     ','=^x.x^=     ','=^x.x^=     ' )
-
-            #compare points before and after.  if user gained 3 points, cat is added to cats_collected
-            #                                   anything other than ^, cat is not added to cats_collected
-
+            print()
             print("Congratulations, you have " + str(points) + " points.")
             print()
             print()
+            #return the dictionary with the player's stats after gameplay
     return {'points': points, 'cats_collected': cats_collected, 'username': username, 'userlives': userlives}
 
 ##################### Output message from four cats at Gary's Cat Cafe ##############################
@@ -176,6 +174,8 @@ def main(userstate):
 
 
 #Enables running this file separately from the rest of the game (testing purposes)
+#in a closed loop
+#DO NOT delete, just comment out
 if __name__ == '__main__':
     main({'points':0, 'cats_collected':[], 'username':' ', 'userlives':9})
     #(username, points, cats_collected, userlives)

@@ -367,11 +367,11 @@ def adoptcat(points):
 
 def main(purrpoints,adoptedcatlist,name,lives):
         import random
-        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'userlives': '' }
+        userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives': 2}
         name = userstate['username']
         purrpoints = userstate['points']
         adoptedcatlist = userstate['cats_collected']
-        lives = userstate['userlives']
+        lives = userstate['lives']
 
         # Introduction to the Location
         print()
@@ -590,7 +590,7 @@ def main(purrpoints,adoptedcatlist,name,lives):
                         if lives == 0:
                                 #break
                                 print()
-        print("You have earned" + purrpoints + "points, and have" + lives + "lives left!")
+        print("You have earned" + str(purrpoints) + "points, and have" + str(lives) + "lives left!")
         return (purrpoints,lives)
 
 

@@ -9,9 +9,9 @@ import math
 import random
 
 import Rachel
-import Vince
-import Kendyll
-import Carol
+# import Vince
+# import Kendyll
+# import Carol
 
 # Display program purpose
 #defining print_intro as a funtion

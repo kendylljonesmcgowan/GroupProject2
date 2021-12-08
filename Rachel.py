@@ -151,14 +151,13 @@ def main(userstate):
     for catdictionary in catlist():
         points_collected = 0
         introduce_cat(catdictionary)
-        print('>>>>>>>>>>>>>>>>>>>>>> Points collected in this round' + str(points_collected))
-        print('>>>>>>>>>>>>>>>>>>>>>> Total points ' + str(points))
+        print(">>>>>>>>>>>>>>>>>>>>>>> Gamer, you have " + str(points_collected) + " points collected in this round.")
+        print('>>>>>>>>>>>>>>>>>>>>>>> Total points ' + str(points))
         for x in range(0,4):
             choice = get_choice()
             points_collected = do_action(choice, catdictionary, points_collected)
-            print("Gamer, you have " + str(points_collected) + " points.")
-            print('>>>>>>>>>>>>>>>>>>>>>> Points collected in this round ' + str(points_collected))
-            print('>>>>>>>>>>>>>>>>>>>>>> Total Points ' + str(points)) 
+            print(">>>>>>>>>>>>>>>>>>>>>>> Gamer, you have " + str(points_collected) + " points collected in this round.")
+            print('>>>>>>>>>>>>>>>>>>>>>>> Total Points ' + str(points)) 
         points += points_collected
         if points_collected >= 3:
             cats_collected.append(catdictionary['name'])

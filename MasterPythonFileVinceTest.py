@@ -1,9 +1,23 @@
-## group 2 project 2 ##
-## GEOM 67, Problem Solving and Programming, Karen Whillans ##
-## Carol Buckingham, Kendyll Jones-McGowan, Rachel Manderfeld, Vince Ruel Alonte ##
+## Group 2, Project 2
+## GEOM 67, Problem Solving and Programming, Karen Whillans
+## Carol Buckingham, Kendyll Jones-McGowan, Rachel Manderfeld, Vince Ruel Alonte
+## Last Modified: December 7th, 2021
 
-## Find the Purrrrfect Friend Game ##
+## Find the Purrrrfect Friend Game
 
+## Welcome to Find the Purrrrfect Friend Game!
+
+## With the increase of individuals wanting to get cats as pets, we wanted to create an educational game that will inform players...  
+## ... (aka Potential  Cat  Owners/Current  Cat  Owners) of the  different  personalities  of common cat breeds. The game will be limited to... 
+## ...16 unique cat profiles. This text-based game is a one-player game. 
+
+## The player is presented with different cat profiles at four unique locations, and selects how they would like to interact with each cat...
+## ...The player can adopt a cat if they choose the right actions based on each cats personality... 
+## ...The player will be awarded PurrPoints for each correct action chosen (but remember: each location has it's own quirk with regards to adoption chance and purrPoints!)...
+## ... If the player selects enough correct actions, they will have a random chance of being able to adopt the cat!...
+## ... if the player is unsuccessful in adopting the cat, they will lose 1 of their 9 lives!
+
+## Have fun and enjoy Group 2's hard work! =^..^=
 
 import math
 import random

@@ -161,8 +161,12 @@ def main(userstate):
         points += points_collected
         if points_collected >= 3:
             cats_collected.append(catdictionary['name'])
+            print('=^..^=')
             print("Congratulations! I'm going to be your new roommate.")
+            print('=^..^=')
+            print('=^..^=')
         elif points_collected < 3:
+            print('=^x.x^=     ' )
             print("The cat says, 'No thank you!'. Try another cat")
             print()
             print("Displeasing the cat has cost you a life!")

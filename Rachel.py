@@ -149,10 +149,17 @@ def main(userstate):
 #after 16 actions (having gone through all four cats) the player has exhausted the contents of this file and goes to another location.  
 #The userstate dictionary carries over that information to the next location. 
     for catdictionary in catlist():
+        points_collected = 0
         introduce_cat(catdictionary)
-        for x in range(1,5):
+        print('>>>>>>>>>>>>>>>>>>>>>> Points collected in this round' + str(points_collected))
+        print('>>>>>>>>>>>>>>>>>>>>>> Total points ' + str(points))
+        for x in range(0,4):
             choice = get_choice()
-            points_collected = do_action(choice, catdictionary, points)
+            points_collected = do_action(choice, catdictionary, points_collected)
+            print("Gamer, you have " + str(points_collected) + " points.")
+            print('>>>>>>>>>>>>>>>>>>>>>> Points collected in this round ' + str(points_collected))
+            print('>>>>>>>>>>>>>>>>>>>>>> Total Points ' + str(points)) 
+        points += points_collected
         if points_collected >= 3:
             cats_collected.append(catdictionary['name'])
             print("Congratulations! I'm going to be your new roommate.")
@@ -185,6 +192,6 @@ def main(userstate):
 #Enables running this file separately from the rest of the game (testing purposes)
 #in a closed loop
 #DO NOT delete, just comment out
-# if __name__ == '__main__':
-#     main({'points':0, 'cats_collected':[], 'username':' ', 'lives':9})
-#     #(username, points, cats_collected, lives)
+if __name__ == '__main__':
+    main({'points':0, 'cats_collected':[], 'username':' ', 'lives':9})
+    #(username, points, cats_collected, lives)

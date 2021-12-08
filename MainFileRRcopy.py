@@ -53,30 +53,30 @@ def main():
     #for loop to iterate through each location
     for loc in location:
         if loc == "LRachel":
-            #userstate = Rachel.main(userstate)
+            userstate = Rachel.main(userstate)
             if userstate['lives'] == 0:
                 break
-        elif loc == "LKendyll":
-            kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
-            userstate['points'] = kendylltuple[0]
-            userstate['lives'] = kendylltuple[1]
-            if userstate['lives'] == 0:
-                break
-        elif loc == "LCarol":
-            #test
-            # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            # print(vincetuple2)
-            # userstate['points'] = vincetuple2[0]
-            # userstate['lives'] = vincetuple2[1]
-            if userstate['lives'] == 0:
-                break
-        else:
-            vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
-            print(vincetuple)
-            userstate['points'] = vincetuple[0] #updates the current number of purrpoint
-            userstate['lives'] = vincetuple[1] #update the current number of lives
-            if userstate['lives'] == 0:
-                break
+        # elif loc == "LKendyll":
+        #     kendylltuple=(Kendyll.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives']))
+        #     userstate['points'] = kendylltuple[0]
+        #     userstate['lives'] = kendylltuple[1]
+        #     if userstate['lives'] == 0:
+        #         break
+        # elif loc == "LCarol":
+        #     #test
+        #     # vincetuple2 = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+        #     # print(vincetuple2)
+        #     # userstate['points'] = vincetuple2[0]
+        #     # userstate['lives'] = vincetuple2[1]
+        #     if userstate['lives'] == 0:
+        #         break
+        # else:
+        #     vincetuple = Vince.main(userstate['points'],userstate['cats_collected'],userstate['username'],userstate['lives'])
+        #     print(vincetuple)
+        #     userstate['points'] = vincetuple[0] #updates the current number of purrpoint
+        #     userstate['lives'] = vincetuple[1] #update the current number of lives
+        #     if userstate['lives'] == 0:
+        #         break
 
     if userstate['lives'] == 0:
         print()

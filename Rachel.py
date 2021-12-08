@@ -133,7 +133,7 @@ def main(userstate):
     username = userstate['username']
     points = userstate['points']
     cats_collected = userstate['cats_collected']
-    userlives = userstate['userlives']
+    lives = userstate['lives']
     print('=^..^=')
     print("Hello " + username)
     print_welcome_message()
@@ -161,17 +161,17 @@ def main(userstate):
             print('=^x.x^=     ','=^x.x^=     ','=^x.x^=     ' )
             
             #if statement about to determine if user loses a life and if lives are zero, ending the game.
-            userlives -= 1
-            if userlives == 0:
+            lives -= 1
+            if lives == 0:
                 break
-            print("You now have " + str(userlives) + " lives left before you die."  )
+            print("You now have " + str(lives) + " lives left before you die."  )
             print('=^x.x^=     ','=^x.x^=     ','=^x.x^=     ' )
             print()
             print("Congratulations, you have " + str(points) + " points.")
             print()
             print()
             #return the dictionary with the player's stats after gameplay
-    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'userlives': userlives}
+    return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
 
 
 
@@ -184,5 +184,5 @@ def main(userstate):
 #in a closed loop
 #DO NOT delete, just comment out
 # if __name__ == '__main__':
-#     main({'points':0, 'cats_collected':[], 'username':' ', 'userlives':9})
-#     #(username, points, cats_collected, userlives)
+#     main({'points':0, 'cats_collected':[], 'username':' ', 'lives':9})
+#     #(username, points, cats_collected, lives)

@@ -55,7 +55,7 @@ def happy_tails_cats():
         'breed': "Short-Hair",
         'personality': 'independent',
         'age': 'adult',
-        'intro': "Hewwo, my name is Artemis. ",
+        'intro': "Hewwo, my name is Artemis. I'm an indepedent cat, and I love to spend my days sunbathing and enjoying the great outdoors.",
         'actions': [
             {'actionName': 'othercats', 'likes': False},
             {'actionName': 'brushing', 'likes': True },
@@ -137,24 +137,26 @@ def main(userstate):
         for x in range(0,5):
             choice = get_choice()
             points = do_action(choice, catdictionary, points)
-        if points == 5:
+        if points >= 3:
+        # if points == 5: <-- this was the original if statement matching the removed elif statements below
             cats_collected.append(catdictionary['name'])
             print("I'd love to come home with you!!")
-        elif points == 4:
-            chance = random.randint(1,10)
-            if chance <= 2:
-                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-            else:
-                cats_collected.append(catdictionary['name'])
-                print("I'd love to come home with you!!")
-        elif points == 3:
-            chance = random.randint(1,10)
-            if chance <= 4:
-                print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
-            else:
-                cats_collected.append(catdictionary['name'])
-                print("I'd love to come home with you!!")
-        elif points <= 2:
+        # This section of code I could not get to work, it skips over it no matter what I change
+        # elif points == 4:
+        #     chance = random.randint(1,10)
+        #     if chance <= 2:
+        #         print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+        #     else:
+        #         cats_collected.append(catdictionary['name'])
+        #         print("I'd love to come home with you!!")
+        # elif points == 3:
+        #     chance = random.randint(1,10)
+        #     if chance <= 4:
+        #         print("Hmm, I'm not feeling like leaving Happy Tails today. Sorry!")
+        #     else:
+        #         cats_collected.append(catdictionary['name'])
+        #         print("I'd love to come home with you!!")
+        else:
             print("I'd rather stay here. Bye!")
             print()
             print("Displeasing the cat has cost you a life!")
@@ -164,7 +166,7 @@ def main(userstate):
             break
         print()
         print()
-    print("Congratulations, you have " + str(points) + " points.")
+    print("Congratulations, you now have " + str(points) + " points.")
     return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
 
 # from master file

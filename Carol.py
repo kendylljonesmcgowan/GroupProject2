@@ -7,9 +7,6 @@
 
 # main definition and call at end is from RachelM
 
-# to do for game:
-# define variables for lives, purr points, cats adopted, 
-
 import math
 import random
 #define functions
@@ -81,6 +78,7 @@ def happy_tails_cats():
       },
   ]
 
+# this function will display this message when my location comes up in the game
 def welcome_message():
     print("  >^.^<   Hey y'all, and welcome to Happy Tails Rescue! Let's see if we can find some cats to be your furever friends!!  >^.^< ")
     print("""
@@ -94,22 +92,29 @@ def welcome_message():
  ('_  _,'.'  (___,))
   `-:;.-'
      """) # credit to Felix Lee for ascii cat, slightly modified by CB
+    print("Here you'll get to meet 4 new Cats! Try to adopt them all by choosing the right interactions to befriend them")
+    print()
+    print("Every correct answer earns you 1 PurrPoint! But REMEMBER: You will lose 1 life per Cat that doesn't want to be adopted by you!")
 
+# this function will randomize the order in which the cats appear in the game
 def htrcatlist():
     htrcats = happy_tails_cats()
     random.shuffle(htrcats)
     return htrcats
 
+# I have an intro line for each cat within the dictionary and this function will call it in my main function
 def introduce_cat(cat):
     print(cat['intro'])  # add cat intro statement calling from dictionary
     print()
     print("   >^.^<   ")
 
+# this is for the user input values! will be run 5 times within the main code
 def get_choice():
     print("Choose which interaction you like to do with me: 1. Brush, 2. Pet, 3. Play, 4. Give a treat")
     useraction = int(input("What would you like to do? Type the number for the action."))
     return useraction
 
+# I separated out the actions to make the code less cluttered (followed Rachel's guide for coding this section)
 def do_action(choice, cat, points):
     doesLike = cat['actions'][choice]['likes']
     if doesLike:
@@ -123,22 +128,30 @@ def do_action(choice, cat, points):
         points -= 0
     return points
 
+# this is the main function for my location
 def main(userstate):
+    # these lines will call the userstate values from the game file into my main function
     username = userstate['username']
     points = userstate['points']
     cats_collected = userstate['cats_collected']
     lives = userstate['lives']
-    print('>^.^<')
+    print("***************************************************************************************************************************************")        
+    print()
+    print('    >^.^<')
     print("Hello " + username)
+    # calling the premade function
     welcome_message()
+    print("***************************************************************************************************************************************")        
+    print()
     import random
     for catdictionary in htrcatlist():
         introduce_cat(catdictionary)
         for x in range(0,5):
+            # calling the premade functions and defining them to varibles; choice is used in points so it has to be defined first!
             choice = get_choice()
             points = do_action(choice, catdictionary, points)
         if points >= 3:
-        # if points == 5: <-- this was the original if statement matching the removed elif statements below
+        # if points == 5: <-- this was the original 'if' statement matching the removed elif statements below
             cats_collected.append(catdictionary['name'])
             print("I'd love to come home with you!!")
         # This section of code I could not get to work, it skips over it no matter what I change
@@ -166,8 +179,18 @@ def main(userstate):
             break
         print()
         print()
+        print("***************************************************************************************************************************************")        
+        print()
     print("Congratulations, you now have " + str(points) + " points.")
     return {'points': points, 'cats_collected': cats_collected, 'username': username, 'lives': lives}
+
+# DON'T DELETE THIS?
+if __name__ == '__main__':
+    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9}
+    main(userstate['points'], userstate['cats_collected'], userstate['username'], userstate['lives'])
+#     #(username, points, cats_collected, lives)
+
+
 
 # from master file
 #defining print_intro as a funtion
@@ -211,12 +234,6 @@ def main(userstate):
 #   else:
 #     print("You adopted the following cats:"+ userstate['cats_collected'] + "!")
 #     print("Purr points collected:" + userstate['purr_points'] + ";  Lives remaining:" + userstate['lives'])
-
-# DON'T DELETE THIS?
-if __name__ == '__main__':
-    userstate = {'points':0, 'cats_collected':[], 'username':' ', 'lives':9}
-    main(userstate['points'], userstate['cats_collected'], userstate['username'], userstate['lives'])
-#     #(username, points, cats_collected, lives)
 
 # print("""
 #          *                  *

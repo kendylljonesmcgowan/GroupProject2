@@ -3,11 +3,10 @@
 ## Carol Buckingham, Kendyll Jones-McGowan, Rachel Manderfeld, Vince Ruel Alonte ##
 
 ## Find the Purrrrfect Friend Game ##
-
-
+# import these two modules for later functions
 import math
 import random
-
+# import all .py files that have each main() function for each location
 import Rachel
 import Vince
 import Kendyll
@@ -29,8 +28,6 @@ def print_intro():
     print("You have 9 lives!!")
     print("Note: Be sure to read the instruction for each location as there may be some quirks!!")
 
-
-
 #defining the main program function
 def main():
     #random.shuffle returns the list in a random order
@@ -48,7 +45,6 @@ def main():
     print()
     userstate['username'] = str(input("   Gamer, what is your name? "))
     print()
-    
 
     #for loop to iterate through each location
     for loc in location:
@@ -96,6 +92,28 @@ def main():
         print ("    Lives Left: " + str(userstate["lives"]))
 
 
-
 if __name__=='__main__':  #calling defined function 'main'
     main()
+
+print("""
+         *                  *
+             __                *
+          ,db'    *     *
+         ,d8/       *        *    *
+         888
+         `db\       *     *
+           `o`_                    **
+      *               *   *    _      *
+            *                 / )
+         *    (\__/) *       ( (  *
+       ,-.,-.,)    (.,-.,-.,-.) ).,-.,-.
+      | @|  ={      }= | @|  / / | @|o |
+     _j__j__j_)     `-------/ /__j__j__j_
+     ________(               /___________
+      |  | @| \              || o|O | @|
+      |o |  |,'\       ,   ,'"|  |  |  |  hjw
+     vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//v
+                _) )    `. \ /
+               (__/       ) )
+                         (_/
+""")

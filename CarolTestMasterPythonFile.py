@@ -61,8 +61,7 @@ def main():
             if userstate['lives'] == 0:
                 break
         elif loc == "LCarol":
-            print("call main function of your program here Carol")
-            # test
+            # print("call main function of your program here Carol")
             caroltuple = Carol.main(userstate)
             print(caroltuple)
             # had to change keys to points/lives vs 0/1 as in default program layout

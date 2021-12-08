@@ -90,12 +90,7 @@ def main():
         print ("        " + str(userstate["cats_collected"]))
         print ("    Your total PurrPoints collected is " + str(userstate["points"]))
         print ("    Lives Left: " + str(userstate["lives"]))
-
-
-if __name__=='__main__':  #calling defined function 'main'
-    main()
-
-print("""
+        print("""
          *                  *
              __                *
           ,db'    *     *
@@ -117,3 +112,6 @@ print("""
                (__/       ) )
                          (_/
 """)
+
+if __name__=='__main__':  #calling defined function 'main'
+    main()

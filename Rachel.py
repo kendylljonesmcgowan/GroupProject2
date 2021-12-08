@@ -1,6 +1,8 @@
-#Geom 67 Group 2 Purrfect Pals Computer Terminal Game
+#Geom 67 2021
+#  Group 2 Purrfect Pals Computer Terminal Game
 #Rachel's code for Gary's Cat Cafe location
-#version 1.0
+#component file for main Purrfect Pals computer game  
+#version 3.0
 #cat ascii art from: #http://www.ascii-art.de/ascii/c/cat.txt
 
 import random

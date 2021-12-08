@@ -147,9 +147,12 @@ def main(userstate):
     for catdictionary in htrcatlist():
         introduce_cat(catdictionary)
         for x in range(0,5):
+            # GARY will come home with the user even with negative interactions.
             # calling the premade functions and defining them to varibles; choice is used in points so it has to be defined first!
             choice = get_choice()
             points = do_action(choice, catdictionary, points)
+        #### I tried to fix this if statement section for hours and could not get it to work, and our group looked at it and couldn't figure out what was wrong
+        #### 
         if points >= 3:
         # if points == 5: <-- this was the original 'if' statement matching the removed elif statements below
             cats_collected.append(catdictionary['name'])
@@ -169,7 +172,8 @@ def main(userstate):
         #     else:
         #         cats_collected.append(catdictionary['name'])
         #         print("I'd love to come home with you!!")
-        else:
+        # the following statement i tried as elif points <= 2: and else: and nothing worked to make the cat not want to come home with the user..
+        elif points <= 2:
             print("I'd rather stay here. Bye!")
             print()
             print("Displeasing the cat has cost you a life!")

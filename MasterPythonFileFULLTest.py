@@ -81,18 +81,18 @@ def main():
     if userstate['lives'] == 0:
         print()
         print ("GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! GAME OVER!! ")
-        print ("Here is you game summary: ")
-        print ("    You were able to adopt these cat:")
+        print ("Here is your game summary: ")
+        print ("    You adopted these cats:")
         print ("        " + str(userstate["cats_collected"]))
-        print ("    The amount PurrPoints collected is " + str(userstate["points"]))
+        print ("    Your total PurrPoints collected is " + str(userstate["points"]))
     else:
         print()
         print ("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMEOW!!!!!!")
         print ("Congratulations for Finishing the the game!")
-        print ("Here is you game summary: ")
-        print ("    You were able to adopt these cat:")
+        print ("Here is your game summary: ")
+        print ("    You adopted these cats:")
         print ("        " + str(userstate["cats_collected"]))
-        print ("    The amount PurrPoints collected is " + str(userstate["points"]))
+        print ("    Your total PurrPoints collected is " + str(userstate["points"]))
         print ("    Lives Left: " + str(userstate["lives"]))
 
 

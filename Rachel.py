@@ -183,6 +183,6 @@ def main(userstate):
 #Enables running this file separately from the rest of the game (testing purposes)
 #in a closed loop
 #DO NOT delete, just comment out
-if __name__ == '__main__':
-    main({'points':0, 'cats_collected':[], 'username':' ', 'userlives':9})
-    #(username, points, cats_collected, userlives)
+# if __name__ == '__main__':
+#     main({'points':0, 'cats_collected':[], 'username':' ', 'userlives':9})
+#     #(username, points, cats_collected, userlives)
